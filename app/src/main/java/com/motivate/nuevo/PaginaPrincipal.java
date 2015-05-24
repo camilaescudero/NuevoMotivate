@@ -1,9 +1,13 @@
 package com.motivate.nuevo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 
 
 public class PaginaPrincipal extends ActionBarActivity {
@@ -11,7 +15,16 @@ public class PaginaPrincipal extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_pagina_principal);
+        Button boton = (Button)findViewById(R.id.btn_nuevapartida);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoform = new Intent(PaginaPrincipal.this,DatosJugador.class);
+                startActivity(nuevoform);
+            }
+        });
     }
 
     @Override
