@@ -37,8 +37,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salon de la Fama"
-        android:id="@+id/btn_salon"
+        android:text="New Button"
+        android:id="@+id/button4"
         android:layout_below="@+id/btn_reglas"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp" />
