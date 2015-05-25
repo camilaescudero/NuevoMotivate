@@ -19,27 +19,41 @@ public class Ruleta  extends ActionBarActivity  {
 
     private StringBuilder mensaje = new StringBuilder();
     private TextView textView;
+    private ArrayList<Jugador> arregloJugadores = new ArrayList<Jugador>();
+    private ArrayList<String> jugadores = new ArrayList<String>();
+    private Jugador jugar = new Jugador();
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruleta);
-
-
         textView = (TextView) findViewById( R.id.txt );
         Intent intent = getIntent();
         Bundle bundle= intent.getExtras();
-        mensaje.append(bundle.getInt("numero"));
+        //mensaje.append(bundle.getInt("numero"));
+        int numero = bundle.getInt("entraRuleta");
         textView.setText( mensaje );
         ArrayList<String> jugadores = new ArrayList<String>();
         ArrayList<Jugador> ju = new ArrayList<Jugador>();
         int j;
-        for ( int i=0; i< bundle.getInt("numero"); i++){
-            j=i+1;
-            jugadores.add("jugador" + j +"\n");
+
+        jugadores=bundle.getStringArrayList("juegue");
+        if(numero ==0){
+            for ( int i=0; i< jugadores.size(); i++){
+                j=i+1;
+
+                  jugar.setNombre(jugadores.get(i));
+                  jugar.setPuntaje(0);
+                  arregloJugadores.add(jugar);
+                mensaje.append(arregloJugadores.get(numero).getNombre());
+            }
         }
+        else{
+
+            mensaje.append(arregloJugadores.get(numero).getNombre());
+        }
+        //mensaje.append("cantidad de veces que ha entrado"+ numero);
         mensaje.append(jugadores);
         textView.setText(mensaje);
     }
-
 }

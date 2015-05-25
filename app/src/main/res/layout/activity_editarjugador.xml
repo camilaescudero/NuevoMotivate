@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Ingrese nombre de jugador"
-            android:id="@+id/txt_ingresar" />
+            android:id="@+id/scrollView"
+            android:fillViewport="false" />
 
         <EditText
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            >
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,6 +53,13 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/txt_lista" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jugar"
+                android:id="@+id/btn_jugar"
+                android:layout_weight="0.09" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

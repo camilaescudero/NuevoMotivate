@@ -1,7 +1,5 @@
 package com.motivate.nuevo;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -21,56 +19,72 @@ public class EditarJugador extends ActionBarActivity {
     private TextView textView;
     private EditText saludo;
     private Button aceptar;
+    private Button iniciar;
     private TextView respuesta;
+    private ArrayList<Jugador> ju = new ArrayList<Jugador>();
+    private ArrayList<String> jugadores = new ArrayList<String>();
+    private Jugador jugar = new Jugador();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editarjugador);
-
         textView = (TextView) findViewById( R.id.txt );
+        //recibo el numero , creo que no se usara
         Intent intent = getIntent();
         Bundle bundle= intent.getExtras();
-        //mensaje.append(bundle.getInt("numero"));
-        //textView.setText( mensaje );
-        ArrayList<String> jugadores = new ArrayList<String>();
-        ArrayList<Jugador> ju = new ArrayList<Jugador>();
 
-        int j;
-        /*for ( int i=0; i< bundle.getInt("numero"); i++) {
-            j = i + 1;
-            jugadores.add("jugador" + j + "\n");
-        }*/
         saludo=(EditText)findViewById(R.id.txt_nombre);
         aceptar=(Button)findViewById(R.id.btn_agregar);
         respuesta=(TextView)findViewById(R.id.txt_mostrar);
+        iniciar= (Button)findViewById(R.id.btn_jugar);
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView = (TextView) findViewById( R.id.txt_lista );
-                Intent intent = getIntent();
-                Bundle bundle= intent.getExtras();
-                ArrayList<String> jugadores = new ArrayList<String>();
-                respuesta.setText(String.valueOf(saludo.getText()));
+                //respuesta.setText(String.valueOf(saludo.getText()));
+
                 jugadores.add(String.valueOf(saludo.getText()));
 
-                mensaje.append(jugadores);
+                getJugar().setNombre(String.valueOf(saludo.getText()));
+                getJugar().setPuntaje(0);
+                getJu().add(getJugar());
+
+                mensaje.append(String.valueOf(saludo.getText()));
+                mensaje.append("\n");
                 textView.setText(mensaje);
+                saludo.setText("");
+            }
+
+        });
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                Intent nuevoform = new Intent(EditarJugador.this,Ruleta.class);
+                bundle.putInt("entraRuleta",0);
+                bundle.putStringArrayList("juegue", jugadores);
+                nuevoform.putExtras(bundle);
+                startActivity(nuevoform);
             }
         });
 
-       // mensaje.append(jugadores);
-       // textView.setText(mensaje);
-       /* TextView editText;
-        AlertDialog.Builder  builder = new AlertDialog.Builder(this);
-        builder.setTitle("Nombre del jugador 1 ").setCancelable(false).setNeutralButton("Aceptar",new DialogInterface.OnClickListener() {
-           public void onClick(DialogInterface dialog, int id) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
-*/
 
+    }
 
+    public Jugador getJugar() {
+        return jugar;
+    }
+
+    public void setJugar(Jugador jugar) {
+        this.jugar = jugar;
+    }
+
+    public ArrayList<Jugador> getJu() {
+        return ju;
+    }
+
+    public void setJu(ArrayList<Jugador> ju) {
+        this.ju = ju;
     }
 }
