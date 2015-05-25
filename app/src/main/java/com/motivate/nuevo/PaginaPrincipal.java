@@ -25,6 +25,15 @@ public class PaginaPrincipal extends ActionBarActivity {
                 startActivity(nuevoform);
             }
         });
+
+        Button boton4 = (Button)findViewById(R.id.btn_salon);
+        boton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoform4 = new Intent(PaginaPrincipal.this,Salon.class);
+                startActivity(nuevoform4);
+            }
+        });
     }
 
     @Override
