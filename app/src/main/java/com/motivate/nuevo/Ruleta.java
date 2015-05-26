@@ -38,6 +38,14 @@ public class Ruleta  extends ActionBarActivity  {
                 startActivity(nuevoform10);
             }
         });
+        Button boton2 = (Button)findViewById(R.id.btn_juego1);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoform1 = new Intent(Ruleta.this, Juego1.class);
+                startActivity(nuevoform1);
+            }
+        });
 
 
         textView = (TextView) findViewById( R.id.txt );
