@@ -43,12 +43,12 @@ public class DatosJugador  extends ActionBarActivity {
 
                 }
                 //mando el Arraylist con los nombres a la Ruleta
-                Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
+                /*Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
                 bundle.putInt("numero",npick.getValue());
                 bundle.putStringArrayList("juegue",jugadores);
                 bundle.putInt("entraRuleta",0);
                 nuevoform.putExtras(bundle);
-                startActivity(nuevoform);
+                startActivity(nuevoform);*/
             }
         });
 
