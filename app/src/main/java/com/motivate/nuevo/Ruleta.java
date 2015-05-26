@@ -26,7 +26,20 @@ public class Ruleta  extends ActionBarActivity  {
 
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_ruleta);
+
+
+        Button boton = (Button)findViewById(R.id.bt_JugarPalabraEnCancion);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoform10 = new Intent(Ruleta.this, CanteLaPalabra.class);
+                startActivity(nuevoform10);
+            }
+        });
+
+
         textView = (TextView) findViewById( R.id.txt );
         Intent intent = getIntent();
         Bundle bundle= intent.getExtras();
@@ -55,5 +68,8 @@ public class Ruleta  extends ActionBarActivity  {
         //mensaje.append("cantidad de veces que ha entrado"+ numero);
         mensaje.append(jugadores);
         textView.setText(mensaje);
+
+
+
     }
 }

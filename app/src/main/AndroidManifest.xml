@@ -40,6 +40,11 @@
             android:label="@string/app_name" >
 
         </activity>
+        <activity
+            android:name=".CanteLaPalabra"
+            android:label="@string/app_name" >
+
+        </activity>
 
 
     </application>

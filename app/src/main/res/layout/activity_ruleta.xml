@@ -9,4 +9,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/txt" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugar canta la palabra"
+        android:id="@+id/bt_JugarPalabraEnCancion"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>

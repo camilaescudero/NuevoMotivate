@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Apretame"
+        android:id="@+id/bt_MuestraPalabraCancion"
+        android:layout_marginBottom="147dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="La palabra es..."
+        android:id="@+id/txt_MuestraPalabraCancion"
+        android:layout_alignTop="@+id/bt_MuestraPalabraCancion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp" />
+
+</RelativeLayout>

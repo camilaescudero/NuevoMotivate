@@ -27,12 +27,27 @@ public class EditarJugador extends ActionBarActivity {
 
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editarjugador);
+
+        Button boton = (Button)findViewById(R.id.btn_jugar);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoform100 = new Intent(EditarJugador.this, Ruleta.class);
+                startActivity(nuevoform100);
+            }
+        });
+
+
         textView = (TextView) findViewById( R.id.txt );
         //recibo el numero , creo que no se usara
         Intent intent = getIntent();
         Bundle bundle= intent.getExtras();
+
+
+
 
         saludo=(EditText)findViewById(R.id.txt_nombre);
         aceptar=(Button)findViewById(R.id.btn_agregar);
