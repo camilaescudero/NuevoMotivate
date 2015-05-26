@@ -55,5 +55,16 @@ public class Ruleta  extends ActionBarActivity  {
         //mensaje.append("cantidad de veces que ha entrado"+ numero);
         mensaje.append(jugadores);
         textView.setText(mensaje);
+
+        /*Button botonPR = (Button)findViewById(R.id.btn_pregunta_respuesta);
+        botonPR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformPR = new Intent(Ruleta.this,PreguntaRespuesta.class);
+                startActivity(nuevoformPR);
+            }
+        });*/
+
+
     }
 }

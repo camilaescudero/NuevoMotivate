@@ -5,6 +5,33 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string-array name="preguntas">
+        <item>Nombre un pais</item>
+        <item>Nombre un animal</item>
+        <item>Escriba un multiplo de 7, mayor que 100 y menor 130 </item>
+        <item>nombre pastes de la cara</item>
+    </string-array>
 
+
+    <string-array name="paises">
+        <item>México</item>
+        <item>Perú</item>
+        <item>España</item>
+        <item>Colombia</item>
+    </string-array>
+
+    <string-array name="animales">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Tortuga</item>
+        <item>Canario</item>
+    </string-array>
+
+    <string-array name="numeros">
+        <item>105</item>
+        <item>112</item>
+        <item>119</item>
+        <item>126</item>
+    </string-array>
 
 </resources>
