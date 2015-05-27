@@ -23,8 +23,8 @@ public class DatosJugador  extends ActionBarActivity {
         setContentView(R.layout.layout_datosjugador);
 
         npick=(NumberPicker)findViewById(R.id.npick_cantidadjugadores);
-        npick.setMaxValue(50);
-        npick.setMinValue(0);
+        npick.setMaxValue(40);
+        npick.setMinValue(1);
         npick.setWrapSelectorWheel(false);
 
         respuesta=(TextView)findViewById(R.id.txt_respuesta);
@@ -43,12 +43,12 @@ public class DatosJugador  extends ActionBarActivity {
 
                 }
                 //mando el Arraylist con los nombres a la Ruleta
-                /*Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
-                bundle.putInt("numero",npick.getValue());
+                Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
+               bundle.putInt("numero",npick.getValue());
                 bundle.putStringArrayList("juegue",jugadores);
                 bundle.putInt("entraRuleta",0);
                 nuevoform.putExtras(bundle);
-                startActivity(nuevoform);*/
+                startActivity(nuevoform);
             }
         });
 
