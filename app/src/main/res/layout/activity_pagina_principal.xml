@@ -1,93 +1,45 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PaginaPrincipal"
 
-    android:background="@mipmap/fondo"
-    android:orientation="vertical">
+    android:background="@mipmap/color">
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva partida"
         android:id="@+id/btn_nuevapartida"
-        android:background="@android:drawable/ic_media_play"
-        android:elegantTextHeight="false"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargar Partida anterior"
         android:id="@+id/btn_cargar"
-        android:background="@android:drawable/stat_notify_sync"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/btn_nuevapartida"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reglas"
         android:id="@+id/btn_reglas"
         android:layout_below="@+id/btn_cargar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp"
-        android:background="@android:drawable/ic_menu_help"
-        android:layout_gravity="center_vertical" />
+        android:layout_marginTop="71dp" />
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salon de la Fama"
         android:id="@+id/btn_salon"
         android:layout_below="@+id/btn_reglas"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@android:drawable/star_big_on"
-        android:layout_gravity="center_vertical" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Nueva partida"
-        android:id="@+id/textView3"
-        android:textColor="#ff000000"
-        android:textSize="20dp"
-        android:layout_below="@+id/btn_nuevapartida"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Cargar nueva partida"
-        android:id="@+id/textView5"
-        android:textColor="#ff000000"
-        android:textSize="20dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Reglas"
-        android:id="@+id/textView6"
-        android:textColor="#ff000000"
-        android:textSize="20dp"
-        android:layout_below="@+id/btn_reglas"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Salón de la fama"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/btn_salon"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ff000000"
-        android:textSize="20dp" />
-
-</LinearLayout>
+        android:layout_marginTop="50dp" />
+</RelativeLayout>

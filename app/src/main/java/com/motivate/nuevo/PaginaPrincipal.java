@@ -26,15 +26,6 @@ public class PaginaPrincipal extends ActionBarActivity {
             }
         });
 
-        Button botonRegla = (Button)findViewById(R.id.btn_reglas);
-        botonRegla.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nuevoform3 = new Intent(PaginaPrincipal.this,Reglas.class);
-                startActivity(nuevoform3);
-            }
-        });
-
         Button boton4 = (Button)findViewById(R.id.btn_salon);
         boton4.setOnClickListener(new View.OnClickListener() {
             @Override
