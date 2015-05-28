@@ -17,7 +17,7 @@ public class Juego_adivinaquien extends ActionBarActivity {
     private String[] nombre_personaje={"angelina_jolie","caua_raymond","jennifer_lopez", "johnny_depp","lindsay_lohan", "paul_walker",
             "vin_diesel","zac_efron"};
     private int intentos = 3;
-    private Button aceptar;
+    private Button aceptar_adivinaquien;
     private TextView mensaje_intentos;
     private EditText usuario_personaje;
     private int numero_generado=0;
@@ -25,7 +25,7 @@ public class Juego_adivinaquien extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adivinaquien);
-        aceptar=(Button)findViewById(R.id.btn_aceptar);
+        aceptar_adivinaquien=(Button)findViewById(R.id.btn_aceptar_adivinaquien);
         mensaje_intentos= (TextView)findViewById(R.id.lbl_intentos);
         usuario_personaje=(EditText)findViewById(R.id.txt_personaje);
         img_personaje=(ImageView)findViewById(R.id.imageView);
@@ -58,33 +58,16 @@ public class Juego_adivinaquien extends ActionBarActivity {
                 break;
         }
 
-        aceptar.setOnClickListener(new View.OnClickListener() {
+        aceptar_adivinaquien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombre= usuario_personaje.getText().toString().toLowerCase();
+                String nombre= usuario_personaje.getText().toString().toLowerCase().trim();
                 if (nombre.equals(nombre_personaje[numero_generado])){
-                    AlertDialog.Builder builder= new AlertDialog.Builder(Juego_adivinaquien.this);
-                    builder.setMessage("Correcto ! ganaste 1 punto")
-                            .setTitle("Correcto")
-                            .setCancelable(false)
-                            .setNeutralButton("Aceptar",
-                                    new DialogInterface.OnClickListener() {
-
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            dialogInterface.cancel();
-                                        }
-                                    }
-                            );
+                    mostrar_alerta("Correcto !", "El personaje es "+nombre+". Has ganado un punto ! ");
+                    //VOLVER A LA RULETA
                 }else {
-                    intentos = intentos - 1;
-                    if (intentos <= 0) {
-                        mensaje_intentos.setText("PERDISTE!!");
-
-                    } else {
-                        mensaje_intentos.setText("Tiene" + intentos + " intentos");
-                    }
-
+                    mostrar_alerta("Incorrecto !","El personaje es "+nombre_personaje[numero_generado]+". Has perdido");
+                    //VOLVER A LA RULETA
                 }
             }
         });
@@ -94,6 +77,23 @@ public class Juego_adivinaquien extends ActionBarActivity {
         img_personaje.setImageResource(resId);
     }
     private int generar_aleatorio(){
+
         return (int) (Math.random()*nombre_personaje.length);
+    }
+
+    private void mostrar_alerta(String titulo,String mensaje){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Juego_adivinaquien.this);
+        builder.setMessage(mensaje)
+                .setTitle(titulo)
+                .setCancelable(false)
+                .setNeutralButton("Aceptar",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

@@ -15,36 +15,8 @@
         android:background="@android:drawable/ic_media_play"
         android:elegantTextHeight="false"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/btn_cargar"
-        android:background="@android:drawable/stat_notify_sync"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/btn_reglas"
-        android:layout_below="@+id/btn_cargar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp"
-        android:background="@android:drawable/ic_menu_help"
-        android:layout_gravity="center_vertical" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/btn_salon"
-        android:layout_below="@+id/btn_reglas"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@android:drawable/star_big_on"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,29 +27,40 @@
         android:textColor="#ff000000"
         android:textSize="20dp"
         android:layout_below="@+id/btn_nuevapartida"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_cargar"
+        android:background="@android:drawable/stat_notify_sync"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Cargar nueva partida"
+        android:text="Cargar partida anterior"
         android:id="@+id/textView5"
         android:textColor="#ff000000"
         android:textSize="20dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Reglas"
-        android:id="@+id/textView6"
-        android:textColor="#ff000000"
-        android:textSize="20dp"
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_salon"
         android:layout_below="@+id/btn_reglas"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/star_big_on"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,6 +71,29 @@
         android:layout_below="@+id/btn_salon"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_reglas"
+        android:layout_below="@+id/btn_cargar"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/ic_menu_help"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Reglas"
+        android:id="@+id/textView6"
+        android:textColor="#ff000000"
+        android:textSize="20dp"
+        android:layout_below="@+id/btn_reglas"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

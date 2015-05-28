@@ -61,9 +61,9 @@ public class EditarJugador extends ActionBarActivity {
 
                 jugadores.add(String.valueOf(saludo.getText()));
 
-                getJugar().setNombre(String.valueOf(saludo.getText()));
-                getJugar().setPuntaje(0);
-                getJu().add(getJugar());
+               // getJugar().setNombre(String.valueOf(saludo.getText()));
+                //getJugar().setPuntaje(0);
+                //getJu().add(getJugar());
 
                 mensaje.append(String.valueOf(saludo.getText()));
                 mensaje.append("\n");
@@ -77,7 +77,7 @@ public class EditarJugador extends ActionBarActivity {
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 Intent nuevoform = new Intent(EditarJugador.this,Ruleta.class);
-                bundle.putInt("entraRuleta",0);
+               // bundle.putInt("entraRuleta",0);
                 bundle.putStringArrayList("juegue", jugadores);
                 nuevoform.putExtras(bundle);
                 startActivity(nuevoform);

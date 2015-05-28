@@ -19,39 +19,55 @@ public class Ruleta  extends ActionBarActivity  {
     private ArrayList<Jugador> arregloJugadores = new ArrayList<Jugador>();
     private ArrayList<String> jugadores = new ArrayList<String>();
     private Jugador jugar = new Jugador();
+
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruleta);
-        textView = (TextView) findViewById( R.id.txt_jugadoresRuleta );
-        Intent intent = getIntent();
-        Bundle bundle= intent.getExtras();
-        mensaje.append(bundle.getInt("numero"));
-        int numero = bundle.getInt("entraRuleta");
-        textView.setText( mensaje );
+        textView = (TextView) findViewById( R.id.lbl_muestra );
+
         ArrayList<String> jugadores = new ArrayList<String>();
         ArrayList<Jugador> ju = new ArrayList<Jugador>();
+        Jugador jugador = new Jugador();
         int j;
 
-       jugadores=bundle.getStringArrayList("juegue");
-        if(numero ==0){
+        //Codigo que recibe desde la otra clase
+
+
+        /*Intent intent = getIntent();
+        Bundle bundle= intent.getExtras();
+        mensaje.append(bundle.getInt("numero"));
+        // viene desde datos jugaodr y recibe
+        int numero = bundle.getInt("entraRuleta");
+        textView.setText( mensaje );*/
+
+        //Recibe datos desde otras clases, si ess que no hay nada en el arreglo ju, crea jugadores con puntajes iniciales cero
+        if(ju.size() ==0){
+            Intent intent = getIntent();
+            Bundle bundle= intent.getExtras();
+            jugadores = bundle.getStringArrayList("juegue");
             for ( int i=0; i< jugadores.size(); i++){
                 j=i+1;
-
                 jugar.setNombre(jugadores.get(i));
                 jugar.setPuntaje(0);
                 arregloJugadores.add(jugar);
-            //    mensaje.append(" "+arregloJugadores.get(numero).getNombre());
             }
-        }
-        else{
+        }//de caso contrario, si el arreglo existe, recibira jugadorturno y puntaje
 
-          //  mensaje.append(arregloJugadores.get(numero).getNombre());
+        else{
+            Intent intent = getIntent();
+            Bundle bundle= intent.getExtras();
+            //mensaje.append(bundle.getInt("turno"));
+            int turno_ = bundle.getInt("turno");
+            int puntaje_ = bundle.getInt("puntaje");
+            mensaje.append("turno"+ turno_ + "puntaje"+ puntaje_);
+            textView.setText( mensaje );
+            //ju.set(turno).setPuntaje(puntaje);
+
+
         }
-        //mensaje.append("cantidad de veces que ha entrado"+ numero);
-       // mensaje.append(jugadores);
-        //textView.setText(mensaje);
+
 
         Button boton_ND = (Button)findViewById(R.id.btn_nodigasi_nodigano);
         boton_ND.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +92,11 @@ public class Ruleta  extends ActionBarActivity  {
         boton_PR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle bundle = new Bundle();
                 Intent nuevoformPR = new Intent(Ruleta.this,PreguntaRespuesta.class);
+                bundle.putInt("turno",0);
+                bundle.putInt("puntaje",0);
+                nuevoformPR.putExtras(bundle);
                 startActivity(nuevoformPR);
             }
         });

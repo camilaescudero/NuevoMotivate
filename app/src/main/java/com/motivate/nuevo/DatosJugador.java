@@ -44,9 +44,10 @@ public class DatosJugador  extends ActionBarActivity {
                 }
                 //mando el Arraylist con los nombres a la Ruleta
                 Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
-               bundle.putInt("numero",npick.getValue());
+                //codigo para mandar datos de un lugar a otro
+                //bundle.putInt("numero",npick.getValue());
                 bundle.putStringArrayList("juegue",jugadores);
-                bundle.putInt("entraRuleta",0);
+                //bundle.putInt("entraRuleta",0);
                 nuevoform.putExtras(bundle);
                 startActivity(nuevoform);
             }
@@ -61,8 +62,8 @@ public class DatosJugador  extends ActionBarActivity {
 
                 Bundle bundle = new Bundle();
                 Intent nuevo = new Intent(DatosJugador.this,EditarJugador.class);
-                //manda solo el nombre de los jugadores a Ruleta
-                bundle.putInt("numero",npick.getValue());
+
+                //bundle.putInt("numero",npick.getValue());
                 nuevo.putExtras(bundle);
                 startActivity(nuevo);
             }

@@ -8,17 +8,51 @@
         android:layout_height="wrap_content"
         android:text="Apretame"
         android:id="@+id/bt_MuestraPalabraCancion"
-        android:layout_marginBottom="147dp"
-        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_MuestraPalabraCancion"
+        android:layout_marginBottom="37dp"
+        android:text="palabra_secreta"
+        android:layout_above="@+id/bt_MuestraPalabraCancion"
+        android:layout_centerHorizontal="true"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cante La Palabra"
+        android:id="@+id/txt_TituloCantePalabra"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:elegantTextHeight="false"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="timer"
+        android:id="@+id/txt_timer"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/bt_MuestraPalabraCancion"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="La palabra es..."
-        android:id="@+id/txt_MuestraPalabraCancion"
-        android:layout_alignTop="@+id/bt_MuestraPalabraCancion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="La palabra es:"
+        android:id="@+id/textView8"
+        android:textSize="17dp"
+        android:layout_marginBottom="68dp"
+        android:layout_above="@+id/txt_MuestraPalabraCancion"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
