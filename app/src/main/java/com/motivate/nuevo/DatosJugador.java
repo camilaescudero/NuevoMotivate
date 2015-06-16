@@ -15,12 +15,13 @@ public class DatosJugador  extends ActionBarActivity {
 
     NumberPicker npick = null;
     TextView respuesta;
-    private ArrayList<Jugador> ju = new ArrayList<Jugador>();
-    private ArrayList<String> jugadores = new ArrayList<String>();
+
+
     Jugador jugar=new Jugador();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_datosjugador);
+
 
         npick=(NumberPicker)findViewById(R.id.npick_cantidadjugadores);
         npick.setMaxValue(40);
@@ -34,21 +35,24 @@ public class DatosJugador  extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 int j;
-                Bundle bundle = new Bundle();
+                Partida p = new Partida();
+                Jugador jue = new Jugador();
                 respuesta.setText(String.valueOf(npick.getValue()));
+                ArrayList<Jugador> ju = new ArrayList<Jugador>();
                 for ( int i=0; i< npick.getValue(); i++){
                     j=i+1;
                     //asigna nombres predeterminados, jugador1, jugador2, etc..
-                    jugadores.add("jugador" + j +"\n");
+                    //jugadores.add("jugador" + j +"\n");
+                    jue.setNombre("jugador "+j);
+                    jue.setPuntaje(0);
+                    ju.add(jue);
+                    p.setJugadores(ju);
+
 
                 }
-                //mando el Arraylist con los nombres a la Ruleta
+
                 Intent nuevoform = new Intent(DatosJugador.this,Ruleta.class);
-                //codigo para mandar datos de un lugar a otro
-                //bundle.putInt("numero",npick.getValue());
-                bundle.putStringArrayList("juegue",jugadores);
-                //bundle.putInt("entraRuleta",0);
-                nuevoform.putExtras(bundle);
+
                 startActivity(nuevoform);
             }
         });
@@ -74,11 +78,5 @@ public class DatosJugador  extends ActionBarActivity {
     }
 
 
-    public ArrayList<Jugador> getJu() {
-        return ju;
-    }
 
-    public void setJu(ArrayList<Jugador> ju) {
-        this.ju = ju;
-    }
 }

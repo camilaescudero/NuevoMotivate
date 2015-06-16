@@ -44,6 +44,13 @@
         android:id="@+id/btn_adivina_quien"
         android:layout_gravity="center_horizontal" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gato"
+        android:id="@+id/btn_gato"
+        android:layout_gravity="center_horizontal" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,4 +63,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/lbl_muestra" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txt_muestrajugadoresRuleta"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@mipmap/fondo"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x1"
+            android:layout_marginTop="149dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/x2"
+            android:layout_toStartOf="@+id/x2"
+            android:background="@mipmap/tele" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x2"
+            android:layout_alignBottom="@+id/x1"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x3"
+            android:layout_alignTop="@+id/x2"
+            android:layout_above="@+id/x6"
+            android:layout_toRightOf="@+id/x2"
+            android:layout_alignRight="@+id/x9"
+            android:layout_alignEnd="@+id/x9"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x4"
+            android:layout_below="@+id/x1"
+            android:layout_alignLeft="@+id/x1"
+            android:layout_alignStart="@+id/x1"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x5"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/x4"
+            android:layout_alignTop="@+id/x4"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x6"
+            android:layout_alignTop="@+id/x4"
+            android:layout_toRightOf="@+id/x5"
+            android:layout_alignRight="@+id/x3"
+            android:layout_alignEnd="@+id/x3"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x7"
+            android:layout_below="@+id/x4"
+            android:layout_alignLeft="@+id/x4"
+            android:layout_alignStart="@+id/x4"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x8"
+            android:layout_below="@+id/x5"
+            android:layout_alignLeft="@+id/x5"
+            android:layout_alignStart="@+id/x5"
+            android:background="@mipmap/tele"  />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/x9"
+            android:layout_below="@+id/x6"
+            android:layout_toRightOf="@+id/x8"
+            android:layout_toEndOf="@+id/x8"
+            android:background="@mipmap/tele"  />
+
+    </RelativeLayout>
+</LinearLayout>

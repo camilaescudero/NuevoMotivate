@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+
+
 /**
  * Created by Cami on 23-05-2015.
  */
@@ -25,6 +27,8 @@ public class Ruleta  extends ActionBarActivity  {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruleta);
+        TextView mostrar;
+        mostrar = (TextView)findViewById(R.id.txt_muestrajugadoresRuleta);
         textView = (TextView) findViewById( R.id.lbl_muestra );
 
         ArrayList<String> jugadores = new ArrayList<String>();
@@ -32,43 +36,18 @@ public class Ruleta  extends ActionBarActivity  {
         Jugador jugador = new Jugador();
         int j;
 
-        //Codigo que recibe desde la otra clase
+        Partida p = new Partida();
+        int i;
+mensaje.append("hola");
+        ju= p.getJugadores();
+        mensaje.append(ju.size());
+         for (i=0; i < ju.size();i++){
 
-
-        /*Intent intent = getIntent();
-        Bundle bundle= intent.getExtras();
-        mensaje.append(bundle.getInt("numero"));
-        // viene desde datos jugaodr y recibe
-        int numero = bundle.getInt("entraRuleta");
-        textView.setText( mensaje );*/
-
-        //Recibe datos desde otras clases, si ess que no hay nada en el arreglo ju, crea jugadores con puntajes iniciales cero
-        if(ju.size() ==0){
-            Intent intent = getIntent();
-            Bundle bundle= intent.getExtras();
-            jugadores = bundle.getStringArrayList("juegue");
-            for ( int i=0; i< jugadores.size(); i++){
-                j=i+1;
-                jugar.setNombre(jugadores.get(i));
-                jugar.setPuntaje(0);
-                arregloJugadores.add(jugar);
-            }
-        }//de caso contrario, si el arreglo existe, recibira jugadorturno y puntaje
-
-        else{
-            Intent intent = getIntent();
-            Bundle bundle= intent.getExtras();
-            //mensaje.append(bundle.getInt("turno"));
-            int turno_ = bundle.getInt("turno");
-            int puntaje_ = bundle.getInt("puntaje");
-            mensaje.append("turno"+ turno_ + "puntaje"+ puntaje_);
-            textView.setText( mensaje );
-            //ju.set(turno).setPuntaje(puntaje);
-
+            mensaje.append(ju.get(i).getNombre());
 
         }
 
-
+        mostrar.setText(mensaje);
         Button boton_ND = (Button)findViewById(R.id.btn_nodigasi_nodigano);
         boton_ND.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,11 +71,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_PR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                Intent nuevoformPR = new Intent(Ruleta.this,PreguntaRespuesta.class);
-                bundle.putInt("turno",0);
-                bundle.putInt("puntaje",0);
-                nuevoformPR.putExtras(bundle);
+                Intent nuevoformPR = new Intent(Ruleta.this, PreguntaRespuesta.class);
                 startActivity(nuevoformPR);
             }
         });
@@ -106,6 +81,16 @@ public class Ruleta  extends ActionBarActivity  {
             @Override
             public void onClick(View view) {
                 Intent nuevoformAD = new Intent(Ruleta.this,Juego_adivinaquien.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
+
+        Button boton_Gato = (Button)findViewById(R.id.btn_gato);
+        boton_Gato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(Ruleta.this,Juego_Gato.class);
                 startActivity(nuevoformAD);
             }
         });

@@ -11,7 +11,7 @@
         android:text="Large Text"
         android:id="@+id/txt_nombreregla"
         android:layout_gravity="center_horizontal"
-        android:textSize="@android:dimen/app_icon_size" />
+        android:textSize="30dp" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:autoText="false"
             android:textColor="#ff000000"
-            android:textSize="@dimen/abc_dialog_padding_material"
+            android:textSize="25dp"
             android:elegantTextHeight="false" />
     </ScrollView>
 </LinearLayout>

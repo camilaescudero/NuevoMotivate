@@ -20,7 +20,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * Created by Cami on 25-05-2015.
  */
-public class PreguntaRespuesta  extends AppCompatActivity {
+public class PreguntaRespuesta extends ActionBarActivity {
     private StringBuilder mensaje = new StringBuilder();
     private int random ;
     private TextView mensaje_cuenta;
@@ -40,17 +40,7 @@ public class PreguntaRespuesta  extends AppCompatActivity {
         mensaje_cuenta = (TextView)findViewById(R.id.txt_cuenta);
         //random = (int)(Math.random()*3);
         random=0;
-        //TextView textView = (TextView) findViewById( R.id.lbl_probandoelpaso );
-        //Codigo que recibe desde la otra clase
-        Intent intent = getIntent();
-        Bundle bundle= intent.getExtras();
-        jugadores = bundle.getStringArrayList("juegue");
-        int turno = bundle.getInt("turno");
-        int puntaje = bundle.getInt("puntaje");
-        //jugadores=bundle.getStringArrayList("juegue");
-       // mensaje.append("turno"+ turno+ "puntaje"+ puntaje);
-        //mensaje.append("\n");
-        //textView.setText(mensaje);
+
 
         Resources res = getResources();
         String[] pregunta = res.getStringArray(R.array.preguntas);
@@ -73,91 +63,82 @@ public class PreguntaRespuesta  extends AppCompatActivity {
                 String[] pregunta = res.getStringArray(R.array.preguntas);
                 String[] respuesta ;
 
-                    if (random == 0) {
-                        respuesta = res.getStringArray(R.array.paises);
-                        for (int i = 0; i < respuesta.length; i++) {
-                            if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
+                if (random == 0) {
+                    respuesta = res.getStringArray(R.array.paises);
+                    for (int i = 0; i < respuesta.length; i++) {
+                        if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
-                                builder.setMessage("Ganaste 10 puntos")
-                                        .setTitle("Atención!!")
-                                        .setCancelable(false)
-                                        .setNeutralButton("Aceptar",
-                                                new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int id) {
-                                                        dialog.cancel();
-                                                    }
-                                                });
-                                AlertDialog alert = builder.create();
-                                alert.show();
-
-                            }
-
-                        }
-                       /* Bundle bundle = new Bundle();
-                        Intent nuevoform_ = new Intent(PreguntaRespuesta.this,VolverRuleta.class);
-                        bundle.putStringArrayList("j", jugadores);
-                        bundle.putInt("t",0);
-                        bundle.putInt("p",0);
-                        nuevoform_.putExtras(bundle);
-                        startActivity(nuevoform_);
-*/
-                    }
-                    if (random == 1) {
-                        respuesta = res.getStringArray(R.array.animales);
-                        for (int i = 0; i < respuesta.length; i++) {
-                            if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
-
-                                AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
-                                builder.setMessage("Ganaste 10 puntos")
-                                        .setTitle("Atención!!")
-                                        .setCancelable(false)
-                                        .setNeutralButton("Aceptar",
-                                                new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int id) {
-                                                        dialog.cancel();
-                                                    }
-                                                });
-                                AlertDialog alert = builder.create();
-                                alert.show();
-                                acerto=true;
-                            }
+                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            builder.setMessage("Ganaste 10 puntos")
+                                    .setTitle("Atención!!")
+                                    .setCancelable(false)
+                                    .setNeutralButton("Aceptar",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    dialog.cancel();
+                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    startActivity(nuevoform4);
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
 
                         }
-                        Bundle bundle = new Bundle();
-                        Intent nuevoform_ = new Intent(PreguntaRespuesta.this,VolverRuleta.class);
 
-                        bundle.putStringArrayList("juegue", jugadores);
-                        bundle.putInt("turno",0);
-                        bundle.putInt("puntaje",0);
-                        nuevoform_.putExtras(bundle);
-                        startActivity(nuevoform_);
                     }
 
-                    if (random == 2) {
-                        respuesta = res.getStringArray(R.array.numeros);
-                        for (int i = 0; i < respuesta.length; i++) {
-                            if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
+                }
+                if (random == 1) {
+                    respuesta = res.getStringArray(R.array.animales);
+                    for (int i = 0; i < respuesta.length; i++) {
+                        if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
-                                builder.setMessage("Ganaste 10 puntos")
-                                        .setTitle("Atención!!" + random)
-                                        .setCancelable(false)
-                                        .setNeutralButton("Aceptar",
-                                                new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int id) {
-                                                        dialog.cancel();
-                                                    }
-                                                });
-                                AlertDialog alert = builder.create();
-                                alert.show();
-                                acerto=true;
-                            }
+                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            builder.setMessage("Ganaste 10 puntos")
+                                    .setTitle("Atención!!")
+                                    .setCancelable(false)
+                                    .setNeutralButton("Aceptar",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    dialog.cancel();
+                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    startActivity(nuevoform4);
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
 
                         }
-                        Intent nuevoform_ = new Intent(PreguntaRespuesta.this,VolverRuleta.class);
-                        startActivity(nuevoform_);
+
                     }
+
+                }
+
+                if (random == 2) {
+                    respuesta = res.getStringArray(R.array.numeros);
+                    for (int i = 0; i < respuesta.length; i++) {
+                        if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
+
+                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            builder.setMessage("Ganaste 10 puntos")
+                                    .setTitle("Atención!!" + random)
+                                    .setCancelable(false)
+                                    .setNeutralButton("Aceptar",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    dialog.cancel();
+                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    startActivity(nuevoform4);
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+
+                        }
+
+                    }
+
+                }
 
 
             }
@@ -165,7 +146,7 @@ public class PreguntaRespuesta  extends AppCompatActivity {
         });
 
 
-     }
+    }
     public void esperar(){
 
         new CountDownTimer(18000,1000) {
@@ -188,21 +169,14 @@ public class PreguntaRespuesta  extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
+                                        Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                        startActivity(nuevoform4);
                                     }
                                 });
                 AlertDialog alert = builder.create();
                 alert.show();
-                Bundle bundle = new Bundle();
-                //Intent nuevoform_ = new Intent(PreguntaRespuesta.this,VolverRuleta.class);
-                //startActivity(nuevoform_);
-                /*Intent nuevoform = new Intent(PreguntaRespuesta.this,Ruleta.class);
-                // bundle.putInt("entraRuleta",0);
-                bundle.putStringArrayList("juegue", jugadores);
-                bundle.putInt("turno",0);
-                bundle.putInt("puntaje",0);
-                nuevoform.putExtras(bundle);
-                startActivity(nuevoform);
-                  */
+
+
 
             }
         }.start();

@@ -75,11 +75,10 @@ public class EditarJugador extends ActionBarActivity {
         iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle bundle = new Bundle();
+
                 Intent nuevoform = new Intent(EditarJugador.this,Ruleta.class);
                // bundle.putInt("entraRuleta",0);
-                bundle.putStringArrayList("juegue", jugadores);
-                nuevoform.putExtras(bundle);
+
                 startActivity(nuevoform);
             }
         });

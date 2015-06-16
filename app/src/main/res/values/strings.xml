@@ -6,25 +6,31 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="preguntas">
-        <item>Nombre un pais</item>
-        <item>Nombre un animal</item>
+        <item>Nombre un pais de America del Sur que no sea Chile ni ninguno de sus vecinos</item>
+        <item>Nombre una clasificacion de los animales vertebrados</item>
         <item>Escriba un multiplo de 7, mayor que 100 y menor 130 </item>
         <item>nombre pastes de la cara</item>
     </string-array>
 
 
     <string-array name="paises">
-        <item>México</item>
-        <item>Perú</item>
-        <item>España</item>
+        <item>Brasil</item>
         <item>Colombia</item>
+        <item>Ecuador</item>
+        <item>Guyana</item>
+        <item>Paraguay</item>
+        <item>Venezuela</item>
+        <item>Uruguay</item>
+        <item>Surinam</item>
     </string-array>
 
     <string-array name="animales">
-        <item>Perro</item>
-        <item>Gato</item>
-        <item>Tortuga</item>
-        <item>Canario</item>
+        <item>mamiferos</item>
+        <item>aves</item>
+        <item>reptiles</item>
+        <item>peces</item>
+        <item>anfibios</item>
+
     </string-array>
 
     <string-array name="numeros">

@@ -11,13 +11,15 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Pregunta"
         android:id="@+id/txt_pregunta"
-        android:layout_weight="0.04" />
+        android:layout_weight="0.04"
+        android:textSize="30dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_respuesta"
-        android:layout_weight="0.04" />
+        android:layout_weight="0.04"
+        android:textSize="30dp" />
 
     <Button
         android:layout_width="wrap_content"
