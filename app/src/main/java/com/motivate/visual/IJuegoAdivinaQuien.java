@@ -1,4 +1,4 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,10 +10,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.motivate.nuevo.JuegoAdivinaQuien;
+import com.motivate.nuevo.R;
+
 /**
  * Created by María Elizabeth on 26-05-2015.
  */
-public class Juego_adivinaquien extends ActionBarActivity {
+public class IJuegoAdivinaQuien extends ActionBarActivity {
     private String[] nombre_personaje={"angelina_jolie","caua_raymond","jennifer_lopez", "johnny_depp","lindsay_lohan", "paul_walker",
             "vin_diesel","zac_efron"};
     private int intentos = 3;
@@ -76,14 +79,11 @@ public class Juego_adivinaquien extends ActionBarActivity {
         int resId= getResources().getIdentifier(nombre_personaje[numero],"mipmap",getPackageName() );
         img_personaje.setImageResource(resId);
     }
-    private int generar_aleatorio(){
 
-        return (int) (Math.random()*nombre_personaje.length);
-    }
 
     private void mostrar_alerta(String titulo,String mensaje){
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(Juego_adivinaquien.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoAdivinaQuien.this);
         builder.setMessage(mensaje)
                 .setTitle(titulo)
                 .setCancelable(false)
@@ -95,5 +95,9 @@ public class Juego_adivinaquien extends ActionBarActivity {
                         });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+    private int generar_aleatorio(){
+
+        return (int) (Math.random()*nombre_personaje.length);
     }
 }

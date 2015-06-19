@@ -1,4 +1,4 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 
 import android.os.Bundle;
@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.motivate.nuevo.R;
 
-public class CanteLaPalabra extends ActionBarActivity {
+
+public class IJuegoCanteLaPalabra extends ActionBarActivity {
     //TEXTO, BOTON Y STRING DE POSIBLES PALABRAS
     private TextView txt_palabrasecreta;
     private TextView txt_muestratimer;

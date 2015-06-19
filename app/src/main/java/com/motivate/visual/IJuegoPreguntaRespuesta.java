@@ -1,4 +1,4 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -7,20 +7,19 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.motivate.nuevo.R;
+
 import java.util.ArrayList;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by Cami on 25-05-2015.
  */
-public class PreguntaRespuesta extends ActionBarActivity {
+public class IJuegoPreguntaRespuesta extends ActionBarActivity {
     private StringBuilder mensaje = new StringBuilder();
     private int random ;
     private TextView mensaje_cuenta;
@@ -68,7 +67,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                     for (int i = 0; i < respuesta.length; i++) {
                         if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
                             builder.setMessage("Ganaste 10 puntos")
                                     .setTitle("Atención!!")
                                     .setCancelable(false)
@@ -76,7 +75,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -93,7 +92,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                     for (int i = 0; i < respuesta.length; i++) {
                         if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
                             builder.setMessage("Ganaste 10 puntos")
                                     .setTitle("Atención!!")
                                     .setCancelable(false)
@@ -101,7 +100,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -119,7 +118,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                     for (int i = 0; i < respuesta.length; i++) {
                         if (respuesta[i].equals(String.valueOf(respuesta_jugador.getText()))) {
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
                             builder.setMessage("Ganaste 10 puntos")
                                     .setTitle("Atención!!" + random)
                                     .setCancelable(false)
@@ -127,7 +126,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -161,7 +160,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
 
             @Override
             public void onFinish() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(PreguntaRespuesta.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
                 builder.setMessage("PERDISTE")
                         .setTitle("Atención!!")
                         .setCancelable(false)
@@ -169,7 +168,7 @@ public class PreguntaRespuesta extends ActionBarActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
-                                        Intent nuevoform4 = new Intent(PreguntaRespuesta.this,Ruleta.class);
+                                        Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
                                         startActivity(nuevoform4);
                                     }
                                 });

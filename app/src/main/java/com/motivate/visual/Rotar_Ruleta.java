@@ -1,4 +1,4 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +7,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.motivate.nuevo.R;
 
 /**
  * Created by Cami on 08-06-2015.

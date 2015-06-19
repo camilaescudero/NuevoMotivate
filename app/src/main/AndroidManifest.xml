@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".PaginaPrincipal"
+            android:name="com.motivate.visual.PaginaPrincipal"
             android:label="@string/app_name" >
 
             <intent-filter>
@@ -20,73 +20,73 @@
         </activity>
 
         <activity
-            android:name=".DatosJugador"
+            android:name="com.motivate.visual.JugadorEstandar"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Ruleta"
+            android:name="com.motivate.visual.Ruleta"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".EditarJugador"
+            android:name="com.motivate.visual.JugadorPersonalizado"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Salon"
+            android:name="com.motivate.visual.Salon"
             android:label="@string/app_name" >
 
         </activity>
         <activity
-            android:name=".CanteLaPalabra"
-            android:label="@string/app_name" >
-
-        </activity>
-
-        <activity
-            android:name=".Juego_nodigasinodigano"
+            android:name="com.motivate.visual.IJuegoCanteLaPalabra"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".PreguntaRespuesta"
+            android:name="com.motivate.visual.IJuegoNoDiga"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Juego_Gato"
+            android:name="com.motivate.visual.IJuegoPreguntaRespuesta"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Reglas"
+            android:name="com.motivate.visual.IJuegoGato"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Mostrar_regla"
+            android:name="com.motivate.visual.Reglas"
+            android:label="@string/app_name" >
+
+        </activity>
+
+        <activity
+            android:name="com.motivate.visual.Mostrar_regla"
             android:label="@string/app_name" >
 
         </activity>
 
 
         <activity
-            android:name=".Juego_adivinaquien"
+            android:name="com.motivate.visual.IJuegoAdivinaQuien"
             android:label="@string/app_name" >
 
         </activity>
 
         <activity
-            android:name=".Rotar_Ruleta"
+            android:name="com.motivate.visual.Rotar_Ruleta"
             android:label="@string/app_name" >
 
 

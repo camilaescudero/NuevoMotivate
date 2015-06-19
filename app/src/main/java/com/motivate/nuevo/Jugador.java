@@ -8,6 +8,11 @@ public class Jugador {
     private String nombre;
     private int puntaje;
 
+    public Jugador(){
+        nombre="";
+        puntaje =0;
+    }
+
     public String getNombre() {
         return nombre;
     }

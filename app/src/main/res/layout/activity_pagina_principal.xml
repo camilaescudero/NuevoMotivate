@@ -96,4 +96,9 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_prueba_rescata" />
+
 </LinearLayout>

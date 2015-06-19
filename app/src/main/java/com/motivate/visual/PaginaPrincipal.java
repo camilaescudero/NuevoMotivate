@@ -1,13 +1,20 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+
+import com.motivate.nuevo.DataBaseManager;
+import com.motivate.nuevo.DbHelper;
+import com.motivate.nuevo.R;
 
 
 public class PaginaPrincipal extends ActionBarActivity {
@@ -15,13 +22,30 @@ public class PaginaPrincipal extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_pagina_principal);
+        ListView list;
+        list=(ListView)findViewById(R.id.listView_prueba_rescata);
+        Cursor cursor;
+        SimpleCursorAdapter adapter;
+        //crea la base de datos
+        DataBaseManager manager =new DataBaseManager(this);
+
+        /*manager.insertar("cami","0");
+        manager.insertar("mari","0");
+        manager.insertar("angie","0");*/
+        String[] from= new String[]{manager.a_nombre,manager.a_puntaje};
+        int[] to= new int[]{android.R.id.text1,android.R.id.text2};
+
+        cursor= manager.cargarJugadores();
+        adapter = new SimpleCursorAdapter(this,android.R.layout.two_line_list_item,cursor,from,to,0);
+        list.setAdapter(adapter);
+
+
         Button boton = (Button)findViewById(R.id.btn_nuevapartida);
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoform = new Intent(PaginaPrincipal.this,DatosJugador.class);
+                Intent nuevoform = new Intent(PaginaPrincipal.this,JugadorEstandar.class);
                 startActivity(nuevoform);
             }
         });

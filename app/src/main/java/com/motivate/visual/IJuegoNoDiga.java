@@ -1,4 +1,4 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.motivate.nuevo.R;
+
 /**
  * Created by Angélica on 26-05-2015.
  */
 
 
-public class Juego_nodigasinodigano extends ActionBarActivity {
+public class IJuegoNoDiga extends ActionBarActivity {
 
     Button comenzar;
 
@@ -73,7 +75,7 @@ public class Juego_nodigasinodigano extends ActionBarActivity {
         botonaceptar = (Button) findViewById(R.id.btn_aceptar);
         botonaceptar.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View view) {
-                        Intent nuevoformA = new Intent(Juego_nodigasinodigano.this,Ruleta.class);
+                        Intent nuevoformA = new Intent(IJuegoNoDiga.this,Ruleta.class);
                         startActivity(nuevoformA);
 
                 }
@@ -84,7 +86,7 @@ public class Juego_nodigasinodigano extends ActionBarActivity {
         botonrechazar = (Button) findViewById(R.id.btn_rechazar);
         botonrechazar.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View view) {
-                        Intent nuevoformR = new Intent(Juego_nodigasinodigano.this,Ruleta.class);
+                        Intent nuevoformR = new Intent(IJuegoNoDiga.this,Ruleta.class);
                         startActivity(nuevoformR);
 
                 }

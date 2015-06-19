@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imagenRuleta"
-            android:src="@mipmap/ruleta51"
+            android:src="@mipmap/ruleta512l"
             android:layout_above="@+id/btn_girar"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"

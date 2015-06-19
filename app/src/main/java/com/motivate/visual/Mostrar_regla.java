@@ -1,8 +1,10 @@
-package com.motivate.nuevo;
+package com.motivate.visual;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
+
+import com.motivate.nuevo.R;
 
 /**
  * Created by María Elizabeth on 24-05-2015.
