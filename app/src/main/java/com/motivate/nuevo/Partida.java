@@ -1,8 +1,5 @@
 package com.motivate.nuevo;
 
-import com.motivate.visual.JugadorEstandar;
-import com.motivate.visual.JugadorPersonalizado;
-
 import java.util.ArrayList;
 
 /**

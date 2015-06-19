@@ -75,7 +75,7 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,IRuleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -100,7 +100,7 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,IRuleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -126,7 +126,7 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int id) {
                                                     dialog.cancel();
-                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
+                                                    Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,IRuleta.class);
                                                     startActivity(nuevoform4);
                                                 }
                                             });
@@ -168,7 +168,7 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
-                                        Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,Ruleta.class);
+                                        Intent nuevoform4 = new Intent(IJuegoPreguntaRespuesta.this,IRuleta.class);
                                         startActivity(nuevoform4);
                                     }
                                 });

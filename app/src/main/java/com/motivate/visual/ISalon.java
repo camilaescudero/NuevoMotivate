@@ -8,7 +8,7 @@ import com.motivate.nuevo.R;
 /**
  * Created by Angélica on 25-05-2015.
  */
-public class Salon  extends ActionBarActivity {
+public class ISalon extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
 

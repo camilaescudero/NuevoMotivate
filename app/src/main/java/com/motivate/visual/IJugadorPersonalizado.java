@@ -8,17 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.motivate.nuevo.DataBaseManager;
-import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.Partida;
 import com.motivate.nuevo.R;
-
-import java.util.ArrayList;
 
 /**
  * Created by Cami on 24-05-2015.
  */
-public class JugadorPersonalizado extends ActionBarActivity {
+public class IJugadorPersonalizado extends ActionBarActivity {
 
     StringBuilder mensaje = new StringBuilder();
     TextView textView;
@@ -37,7 +33,7 @@ public class JugadorPersonalizado extends ActionBarActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoform = new Intent(JugadorPersonalizado.this, Ruleta.class);
+                Intent nuevoform = new Intent(IJugadorPersonalizado.this, IRuleta.class);
                 startActivity(nuevoform);
             }
         });
@@ -69,7 +65,7 @@ public class JugadorPersonalizado extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                Intent nuevoform = new Intent(JugadorPersonalizado.this,Ruleta.class);
+                Intent nuevoform = new Intent(IJugadorPersonalizado.this,IRuleta.class);
                 startActivity(nuevoform);
             }
         });

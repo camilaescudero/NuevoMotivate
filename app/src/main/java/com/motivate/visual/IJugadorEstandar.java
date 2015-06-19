@@ -15,7 +15,7 @@ import com.motivate.nuevo.R;
 import java.util.ArrayList;
 
 
-public class JugadorEstandar extends ActionBarActivity {
+public class IJugadorEstandar extends ActionBarActivity {
     NumberPicker npick = null;
     TextView respuesta;
 
@@ -52,7 +52,7 @@ public class JugadorEstandar extends ActionBarActivity {
                 }
                 p.setJugadores(jue);
 
-                Intent nuevoform = new Intent(JugadorEstandar.this,Ruleta.class);
+                Intent nuevoform = new Intent(IJugadorEstandar.this,IRuleta.class);
                 startActivity(nuevoform);
             }
         });
@@ -64,7 +64,7 @@ public class JugadorEstandar extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                Intent nuevo = new Intent(JugadorEstandar.this,JugadorPersonalizado.class);
+                Intent nuevo = new Intent(IJugadorEstandar.this,IJugadorPersonalizado.class);
                 startActivity(nuevo);
             }
         });

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.motivate.nuevo.JuegoGato;
-import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
 
 /**
@@ -269,7 +268,7 @@ public class IJuegoGato extends ActionBarActivity {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
-                                    Intent nuevoform4 = new Intent(IJuegoGato.this,Ruleta.class);
+                                    Intent nuevoform4 = new Intent(IJuegoGato.this,IRuleta.class);
                                     startActivity(nuevoform4);
                                 }
                             });
@@ -287,7 +286,7 @@ public class IJuegoGato extends ActionBarActivity {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
-                                    Intent nuevoform4 = new Intent(IJuegoGato.this,Ruleta.class);
+                                    Intent nuevoform4 = new Intent(IJuegoGato.this,IRuleta.class);
                                     startActivity(nuevoform4);
                                 }
                             });
@@ -304,7 +303,7 @@ public class IJuegoGato extends ActionBarActivity {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
-                                    Intent nuevoform4 = new Intent(IJuegoGato.this,Ruleta.class);
+                                    Intent nuevoform4 = new Intent(IJuegoGato.this,IRuleta.class);
                                     startActivity(nuevoform4);
                                 }
                             });

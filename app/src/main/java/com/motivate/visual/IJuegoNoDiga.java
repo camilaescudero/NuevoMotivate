@@ -75,7 +75,7 @@ public class IJuegoNoDiga extends ActionBarActivity {
         botonaceptar = (Button) findViewById(R.id.btn_aceptar);
         botonaceptar.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View view) {
-                        Intent nuevoformA = new Intent(IJuegoNoDiga.this,Ruleta.class);
+                        Intent nuevoformA = new Intent(IJuegoNoDiga.this,IRuleta.class);
                         startActivity(nuevoformA);
 
                 }
@@ -86,7 +86,7 @@ public class IJuegoNoDiga extends ActionBarActivity {
         botonrechazar = (Button) findViewById(R.id.btn_rechazar);
         botonrechazar.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View view) {
-                        Intent nuevoformR = new Intent(IJuegoNoDiga.this,Ruleta.class);
+                        Intent nuevoformR = new Intent(IJuegoNoDiga.this,IRuleta.class);
                         startActivity(nuevoformR);
 
                 }

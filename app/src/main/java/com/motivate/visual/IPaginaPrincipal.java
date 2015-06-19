@@ -2,7 +2,6 @@ package com.motivate.visual;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,11 +12,10 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.motivate.nuevo.DataBaseManager;
-import com.motivate.nuevo.DbHelper;
 import com.motivate.nuevo.R;
 
 
-public class PaginaPrincipal extends ActionBarActivity {
+public class IPaginaPrincipal extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +43,7 @@ public class PaginaPrincipal extends ActionBarActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoform = new Intent(PaginaPrincipal.this,JugadorEstandar.class);
+                Intent nuevoform = new Intent(IPaginaPrincipal.this,IJugadorEstandar.class);
                 startActivity(nuevoform);
             }
         });
@@ -54,7 +52,7 @@ public class PaginaPrincipal extends ActionBarActivity {
         botonRegla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoform3 = new Intent(PaginaPrincipal.this,Reglas.class);
+                Intent nuevoform3 = new Intent(IPaginaPrincipal.this,IReglas.class);
                 startActivity(nuevoform3);
             }
         });
@@ -63,7 +61,7 @@ public class PaginaPrincipal extends ActionBarActivity {
         boton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoform4 = new Intent(PaginaPrincipal.this,Salon.class);
+                Intent nuevoform4 = new Intent(IPaginaPrincipal.this,ISalon.class);
                 startActivity(nuevoform4);
             }
         });

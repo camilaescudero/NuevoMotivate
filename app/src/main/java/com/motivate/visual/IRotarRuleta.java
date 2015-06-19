@@ -13,7 +13,7 @@ import com.motivate.nuevo.R;
 /**
  * Created by Cami on 08-06-2015.
  */
-public class Rotar_Ruleta extends ActionBarActivity {
+public class IRotarRuleta extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class Rotar_Ruleta extends ActionBarActivity {
             public void onClick(View view) {
                 ImageView imagen = (ImageView)findViewById(R.id.imagenRuleta);
                 Animation rota;
-                rota = AnimationUtils.loadAnimation(Rotar_Ruleta.this, R.anim.rotacion);
+                rota = AnimationUtils.loadAnimation(IRotarRuleta.this, R.anim.rotacion);
                 rota.reset();
                 imagen.startAnimation(rota);
             }

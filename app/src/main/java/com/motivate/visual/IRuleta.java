@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * Created by Cami on 23-05-2015.
  */
-public class Ruleta  extends ActionBarActivity  {
+public class IRuleta extends ActionBarActivity  {
 
     StringBuilder mensaje = new StringBuilder();
     TextView textView;
@@ -55,7 +55,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_ND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformND = new Intent(Ruleta.this,IJuegoNoDiga.class);
+                Intent nuevoformND = new Intent(IRuleta.this,IJuegoNoDiga.class);
                 startActivity(nuevoformND);
             }
         });
@@ -64,7 +64,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_CP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformCP = new Intent(Ruleta.this,IJuegoCanteLaPalabra.class);
+                Intent nuevoformCP = new Intent(IRuleta.this,IJuegoCanteLaPalabra.class);
                 startActivity(nuevoformCP);
             }
         });
@@ -74,7 +74,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_PR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformPR = new Intent(Ruleta.this, IJuegoPreguntaRespuesta.class);
+                Intent nuevoformPR = new Intent(IRuleta.this, IJuegoPreguntaRespuesta.class);
                 startActivity(nuevoformPR);
             }
         });
@@ -83,7 +83,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_AQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformAD = new Intent(Ruleta.this,IJuegoAdivinaQuien.class);
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoAdivinaQuien.class);
                 startActivity(nuevoformAD);
             }
         });
@@ -93,7 +93,7 @@ public class Ruleta  extends ActionBarActivity  {
         boton_Gato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformAD = new Intent(Ruleta.this,IJuegoGato.class);
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoGato.class);
                 startActivity(nuevoformAD);
             }
         });

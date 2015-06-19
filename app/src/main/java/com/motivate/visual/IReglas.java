@@ -13,7 +13,7 @@ import com.motivate.nuevo.R;
 /**
  * Created by María Elizabeth on 23-05-2015.
  */
-public class Reglas extends ActionBarActivity implements ListView.OnItemClickListener, View.OnClickListener {
+public class IReglas extends ActionBarActivity implements ListView.OnItemClickListener, View.OnClickListener {
     private ListView lv_juegos;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class Reglas extends ActionBarActivity implements ListView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long id) {
         String valor= (String) adapterView.getItemAtPosition(posicion);
-        Intent nuevoform= new Intent(Reglas.this,Mostrar_regla.class);
+        Intent nuevoform= new Intent(IReglas.this,IMostrarRegla.class);
         nuevoform.putExtra("Juego", valor);
         startActivity(nuevoform);
 
