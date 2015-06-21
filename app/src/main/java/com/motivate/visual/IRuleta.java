@@ -98,5 +98,14 @@ public class IRuleta extends ActionBarActivity  {
             }
         });
 
+        Button boton_Ahorcado = (Button)findViewById(R.id.btn_ahorcado);
+        boton_Ahorcado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoAhorcado.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
     }
 }
