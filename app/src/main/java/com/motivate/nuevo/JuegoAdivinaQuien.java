@@ -55,7 +55,6 @@ public class JuegoAdivinaQuien extends Juego {
 
 
     private int generar_aleatorio(){
-
         return (int) (Math.random()*nombre_personaje.length);
     }
 

@@ -44,10 +44,8 @@ public class IJuegoAdivinaQuien extends ActionBarActivity {
                 String nombre = usuario_personaje.getText().toString().toLowerCase().trim();
                 if (nombre.equals(adivinaQuien.asignar_nombre())) {
                     mostrar_alerta("Correcto !", "El personaje es " + nombre + ". Has ganado un punto ! ");
-                    //VOLVER A LA RULETA
                 } else {
                     mostrar_alerta("Incorrecto !", "El personaje es " + adivinaQuien.asignar_nombre() + ". Has perdido");
-                    //VOLVER A LA RULETA
                 }
             }
         });
