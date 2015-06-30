@@ -318,13 +318,6 @@ public class IJuegoAhorcado extends ActionBarActivity {
 
        // System.out.println("nombre " + adivinaQuien.asignar_nombre());
     }
-    private String arregla_palabra(char letra){
-        String palabra_bonita= ahorcado.generar_palabra(letra).toString();
-        palabra_bonita=palabra_bonita.replace("[","");
-        palabra_bonita=palabra_bonita.replace("]","");
-        palabra_bonita=palabra_bonita.replace(","," ");
-        return palabra_bonita;
-    }
 
     private void mostrar_alerta(String titulo,String mensaje){
 

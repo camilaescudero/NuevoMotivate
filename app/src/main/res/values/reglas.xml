@@ -7,7 +7,7 @@
         contrario se quemará una sección de “el ahorcado”. Cuando la figura se queme completamente, el jugador habrá perdido la
         partida. En caso que logre adivinar la palabra, ganará 1 punto.</string>
 
-    <string name="regla_bachillerato">Este juego será con un tiempo limitado de 15 segundos. Las secciones a completar serán: nombre,
+    <string name="regla_bachillerato">Este juego será con un tiempo limitado de 30 segundos. Las secciones a completar serán: nombre o apellido,
         animal, fruta o verdura y país o ciudad. En este caso los demás jugadores serán "el jurado", es decir, si el jugador logra
         completar todos los campos en el tiempo indicado, ellos serán quienes decidan si sus respuestas están bien o fueron
         incorrectas o inventadas. En caso de que el jugador no logre terminar en el tiempo determinado o "el jurado" determine que

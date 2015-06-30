@@ -55,7 +55,7 @@ public class IRuleta extends ActionBarActivity  {
         boton_ND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformND = new Intent(IRuleta.this,IJuegoNoDiga.class);
+                Intent nuevoformND = new Intent(IRuleta.this, IJuegoNoDiga.class);
                 startActivity(nuevoformND);
             }
         });
@@ -103,6 +103,15 @@ public class IRuleta extends ActionBarActivity  {
             @Override
             public void onClick(View view) {
                 Intent nuevoformAD = new Intent(IRuleta.this,IJuegoAhorcado.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
+        Button boton_Bachillerato = (Button)findViewById(R.id.btn_bachillerato);
+        boton_Bachillerato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoBachillerato.class);
                 startActivity(nuevoformAD);
             }
         });
