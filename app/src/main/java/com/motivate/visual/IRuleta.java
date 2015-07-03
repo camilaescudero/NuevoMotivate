@@ -116,5 +116,14 @@ public class IRuleta extends ActionBarActivity  {
             }
         });
 
+        Button boton_tabu = (Button)findViewById(R.id.btn_tabu);
+        boton_tabu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoTabu.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
     }
 }

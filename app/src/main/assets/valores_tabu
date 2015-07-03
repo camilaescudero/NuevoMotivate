@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<records>
+    <palabras>
+        <palabra>Cumpleanos</palabra>
+        <res1>Regalo</res1>
+        <res2>Fiesta</res2>
+        <res3>Globo</res3>
+        <res4>Vela</res4>
+        <res5>Torta</res5>
+    </palabras>
+    <palabras>
+        <palabra>Playa</palabra>
+        <res1>Arena</res1>
+        <res2>Mar</res2>
+        <res3>Toalla</res3>
+        <res4>Traje de baño</res4>
+        <res5>Sol</res5>
+    </palabras>
+    <palabras>
+        <palabra>Semaforo</palabra>
+        <res1>Rojo</res1>
+        <res2>Verde</res2>
+        <res3>Amarillo</res3>
+        <res4>Luz</res4>
+        <res5>Trafico</res5>
+    </palabras>
+    <palabras>
+        <palabra>Pan</palabra>
+        <res1>Alimento</res1>
+        <res2>Desayuno</res2>
+        <res3>Harina</res3>
+        <res4>Sandwich</res4>
+        <res5>Comer</res5>
+    </palabras>
+    <palabra>
+        <palabra>Zapato</palabra>
+        <res1>Pie</res1>
+        <res2>Caminar</res2>
+        <res3>Suela</res3>
+        <res4>Calcetin</res4>
+        <res5>Cordon</res5>
+    </palabra>
+</records>
