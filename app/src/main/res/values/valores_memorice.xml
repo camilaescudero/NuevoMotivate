@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rangers">
+        <item>rojo</item>
+        <item>negro</item>
+        <item>azul</item>
+        <item>negro</item>
+        <item>rosado</item>
+        <item>azul</item>
+        <item>blanco</item>
+        <item>amarillo</item>
+        <item>blanco</item>
+        <item>rojo</item>
+        <item>rosado</item>
+        <item>amarillo</item>
+    </string-array>
+</resources>

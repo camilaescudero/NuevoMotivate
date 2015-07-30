@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".IRuleta"
+    android:background="@mipmap/fondo">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txt_memorice"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Memorice" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_memorice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas11"
+                android:layout_column="0"
+                android:background="@drawable/casilla5"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas12"
+                android:layout_column="1"
+                android:background="@drawable/casilla5"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas13"
+                android:layout_column="2"
+                android:background="@drawable/casilla5"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas14"
+                android:layout_column="3"
+                android:background="@drawable/casilla5"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas21"
+                android:layout_column="0"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas22"
+                android:layout_column="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas23"
+                android:layout_column="2"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas24"
+                android:layout_column="3"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas31"
+                android:layout_column="0"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas32"
+                android:layout_column="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas33"
+                android:layout_column="2"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="95dp"
+                android:id="@+id/btn_cas34"
+                android:layout_column="3"
+                android:adjustViewBounds="true"
+                android:background="@drawable/casilla5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="empezar"
+        android:id="@+id/btn_terminar"
+        android:layout_marginBottom="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Timer"
+        android:id="@+id/txt_timer"
+        android:layout_above="@+id/btn_terminar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+</RelativeLayout>

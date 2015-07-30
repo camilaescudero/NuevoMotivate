@@ -125,5 +125,13 @@ public class IRuleta extends ActionBarActivity  {
             }
         });
 
+        Button boton_memorice = (Button)findViewById(R.id.btn_memorice);
+        boton_memorice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoMemorice.class);
+                startActivity(nuevoformAD);
+            }
+        });
     }
 }
