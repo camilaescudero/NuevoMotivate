@@ -12,7 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
+import com.motivate.nuevo.Juego;
 import com.motivate.nuevo.JuegoPreguntaRespuesta;
+import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
 
 import java.util.ArrayList;
@@ -27,12 +31,30 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
     boolean terminado= false;
     boolean acerto=false;
 
+  public IJuegoPreguntaRespuesta() {
+
+
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta_respuesta);
         numero_aleatorio = (int)(Math.random()*3);
+
+
+        DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+        DataBaseJugador baseJugador = new DataBaseJugador(this);
+        ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+        jugadors= baseJugador.rescatarDatos();
+        Juego juego= new Juego(dataBaseJuego.rescatarDatos());
+
+
+        dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
+        System.out.println("NUMERO QUE GUARDA EN BD"+dataBaseJuego.rescatarDatos()+1);
+        TextView jugador = (TextView)findViewById(R.id.txt_jugadorPR);
+        jugador.setText(jugadors.get(juego.getTurno()).getNombre());
         TextView pregunta_aleatoria = (TextView)findViewById(R.id.txt_pregunta);
         EditText respuesta_jugador =(EditText)findViewById(R.id.txt_respuesta);
         mensaje_cuenta = (TextView)findViewById(R.id.txt_cuenta);
@@ -79,7 +101,15 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
 
     }
     public void mensaje_respuesta(int numero){
+
         if(numero==1){
+            DataBaseJugador manager = new DataBaseJugador(this);
+            ArrayList<Jugador> jugadors= new ArrayList<Jugador>();
+            jugadors= manager.rescatarDatos();
+
+            manager.modificarPuntaje(jugadors.get(0).getNombre(),10);
+
+
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
             builder.setMessage("Ganaste 10 puntos")
                     .setTitle("Atención!!")

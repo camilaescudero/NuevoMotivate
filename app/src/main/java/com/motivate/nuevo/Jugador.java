@@ -12,6 +12,10 @@ public class Jugador {
         nombre="";
         puntaje =0;
     }
+    public Jugador(int id, String nomb, int punt){
+        nombre=nomb;
+        puntaje=punt;
+    }
 
     public String getNombre() {
         return nombre;
@@ -21,7 +25,7 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public int getPuntaje() {
+    public int  getPuntaje() {
         return puntaje;
     }
 

@@ -5,19 +5,19 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Cami on 17-06-2015.
+ * Created by Cami on 29-06-2015.
  */
-public class DbHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME ="jugadores.sqlite";
+public class DbHelperJuego  extends SQLiteOpenHelper {
+    private static final String DB_NAME ="juego.sqlite";
     private static final int DB_SCHEME_VERSION =1;
-    public DbHelper(Context context) {
+    public DbHelperJuego(Context context) {
         super(context, DB_NAME, null, DB_SCHEME_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL(DataBaseJugador.CREATE_TABLE);
+        db.execSQL(DataBaseJuego.CREATE_TABLE);
 
     }
 

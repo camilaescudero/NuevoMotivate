@@ -93,5 +93,23 @@
             android:layout_toEndOf="@+id/x8"
             android:background="@mipmap/tele"  />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Gato"
+            android:id="@+id/juegogato"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txt_gato_versus"
+            android:layout_below="@+id/juegogato"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 </LinearLayout>

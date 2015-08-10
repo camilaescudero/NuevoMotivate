@@ -8,11 +8,9 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-import com.motivate.nuevo.Jugador;
+import com.motivate.nuevo.DataBaseJugador;
 import com.motivate.nuevo.Partida;
 import com.motivate.nuevo.R;
-
-import java.util.ArrayList;
 
 
 public class IJugadorEstandar extends ActionBarActivity {
@@ -39,18 +37,10 @@ public class IJugadorEstandar extends ActionBarActivity {
                 Partida p = new Partida();
 
                 respuesta.setText(String.valueOf(npick.getValue()));
-                ArrayList<Jugador> jue = new ArrayList<Jugador>();
 
-                for ( int i=0; i< npick.getValue(); i++){
-                    j=i+1;
-                    Jugador jug = new Jugador();
-                    jug.setNombre("jugador "+j);
-                    jug.setPuntaje(0);
-                    jue.add(jug);
-
-
-                }
-                p.setJugadores(jue);
+                DataBaseJugador manager = new DataBaseJugador(IJugadorEstandar.this);
+                p.creaEstandar(npick.getValue());
+                manager.insertar(p.getJugadores());
 
                 Intent nuevoform = new Intent(IJugadorEstandar.this,IRuleta.class);
                 startActivity(nuevoform);

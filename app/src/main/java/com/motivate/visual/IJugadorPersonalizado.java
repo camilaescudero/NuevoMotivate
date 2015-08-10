@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJugador;
 import com.motivate.nuevo.Partida;
 import com.motivate.nuevo.R;
 
@@ -52,6 +53,8 @@ public class IJugadorPersonalizado extends ActionBarActivity {
                 //respuesta.setText(String.valueOf(saludo.getText()));
                 Partida p= new Partida();
                 p.creaPersonalizado(String.valueOf(nombre.getText()));
+                DataBaseJugador manager = new DataBaseJugador(IJugadorPersonalizado.this);
+                manager.insertar(p.getJugadores());
 
                 mensaje.append(String.valueOf(nombre.getText()));
                 mensaje.append("\n");

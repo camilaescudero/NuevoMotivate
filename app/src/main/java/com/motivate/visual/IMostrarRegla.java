@@ -21,7 +21,7 @@ public class IMostrarRegla extends ActionBarActivity {
             txt_nombreregla.setText(parametros.getString("Juego"));
             String nombre= txt_nombreregla.getText().toString();
             System.out.println(nombre);
-            switch (nombre){
+            /*switch (nombre){
                 case "El ahorcado":
                     txt_descripcionregla.setText(R.string.regla_elahorcado);
                     break;
@@ -64,7 +64,7 @@ public class IMostrarRegla extends ActionBarActivity {
                     break;
                 default:txt_descripcionregla.setText(nombre);
 
-            }
+            }*/
         }
     }
 }

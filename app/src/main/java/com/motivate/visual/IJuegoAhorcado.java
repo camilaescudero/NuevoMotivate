@@ -14,7 +14,7 @@ import com.motivate.nuevo.JuegoAhorcado;
 import com.motivate.nuevo.R;
 
 /**
- * Created by María Elizabeth on 20-06-2015.
+ * Created by Mara Elizabeth on 20-06-2015.
  */
 public class IJuegoAhorcado extends ActionBarActivity {
     Button btna,btnb,btnc,btnd,btne,btnf,btng,btnh,btni,btnj,btnk,btnl,btnm,btnn,btnnn,btno,btnp,btnq,btnr,btns,btnt,btnu,btnv,
@@ -171,7 +171,7 @@ public class IJuegoAhorcado extends ActionBarActivity {
         btnnn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click('ñ');
+                click('ï¿½');
                 btnnn.setEnabled(false);
             }
         });

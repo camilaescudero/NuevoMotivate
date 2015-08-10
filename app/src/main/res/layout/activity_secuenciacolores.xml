@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@mipmap/fondo">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_rojo"
+            android:background="@mipmap/rojooff"
+            android:layout_marginTop="122dp"
+            android:layout_below="@+id/btn_amarillo"
+            android:layout_alignLeft="@+id/btn_amarillo"
+            android:layout_alignStart="@+id/btn_amarillo" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_verde"
+            android:background="@mipmap/verdeoff"
+            android:layout_gravity="bottom"
+            android:layout_alignTop="@+id/btn_rojo"
+            android:layout_alignLeft="@+id/btn_azul"
+            android:layout_alignStart="@+id/btn_azul" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_amarillo"
+            android:background="@mipmap/amarillooff"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@+id/textView_jugadorsecuencia"
+            android:layout_alignLeft="@+id/textView_secuencia"
+            android:layout_alignStart="@+id/textView_secuencia" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_azul"
+            android:background="@mipmap/azuloff"
+            android:layout_gravity="center_vertical"
+            android:layout_alignTop="@+id/btn_amarillo"
+            android:layout_alignRight="@+id/textView_secuencia"
+            android:layout_alignEnd="@+id/textView_secuencia" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Secuencia de Colores"
+            android:id="@+id/textView_secuencia"
+            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Jugador!"
+            android:id="@+id/textView_jugadorsecuencia"
+            android:layout_below="@+id/textView_secuencia"
+            android:layout_toLeftOf="@+id/btn_azul"
+            android:layout_toStartOf="@+id/btn_azul" />
+
+    </RelativeLayout>
+</LinearLayout>

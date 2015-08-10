@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
 import com.motivate.nuevo.Jugador;
-import com.motivate.nuevo.Partida;
 import com.motivate.nuevo.R;
 
 import java.util.ArrayList;
@@ -37,16 +38,19 @@ public class IRuleta extends ActionBarActivity  {
         ArrayList<String> jugadores = new ArrayList<String>();
         ArrayList<Jugador> juega = new ArrayList<Jugador>();
         Jugador jugador = new Jugador();
-        int j;
+        int j, turno;
 
-        Partida p = new Partida();
+        DataBaseJugador manager = new DataBaseJugador(this);
+        juega= manager.rescatarDatos();
+        DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+        turno= dataBaseJuego.rescatarDatos();
         int i;
-        mensaje.append("hola");
-        juega= p.getJugadores();
-        mensaje.append(juega.size());
+        mensaje.append("hola\n");
+
+        mensaje.append("\nturno : "+turno+"\n");
          for (i=0; i < juega.size();i++){
 
-            mensaje.append( p.getJugadores().get(i).getNombre());
+            mensaje.append("\n"+juega.get(i).getNombre());
 
         }
 

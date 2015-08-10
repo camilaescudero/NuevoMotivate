@@ -3,7 +3,7 @@ package com.motivate.nuevo;
 import java.util.ArrayList;
 
 /**
- * Created by María Elizabeth on 20-06-2015.
+ * Created by Maria Elizabeth on 20-06-2015.
  */
 public class JuegoAhorcado extends Juego {
     private String[] img_ahorcado={"ahorcadoinicial","ahorcadopiernas","ahorcadotronco","ahorcadobrazos","ahorcadocuello",

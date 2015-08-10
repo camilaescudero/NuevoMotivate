@@ -10,14 +10,11 @@
         <activity
             android:name="com.motivate.visual.IPaginaPrincipal"
             android:label="@string/app_name" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
 
         <activity
@@ -42,6 +39,8 @@
             android:name="com.motivate.visual.ISalon"
             android:label="@string/app_name" >
 
+
+
         </activity>
         <activity
             android:name="com.motivate.visual.IJuegoCanteLaPalabra"
@@ -59,11 +58,18 @@
             android:name="com.motivate.visual.IJuegoPreguntaRespuesta"
             android:label="@string/app_name" >
 
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
             android:name="com.motivate.visual.IJuegoGato"
             android:label="@string/app_name" >
+
 
         </activity>
 
@@ -79,11 +85,14 @@
 
         </activity>
 
+        <activity
+            android:name="com.motivate.visual.ICargaPartidaAnterior"
+            android:label="@string/app_name" >
+        </activity>
 
         <activity
             android:name="com.motivate.visual.IJuegoAdivinaQuien"
             android:label="@string/app_name" >
-
 
         </activity>
 
@@ -91,6 +100,11 @@
             android:name="com.motivate.visual.IJuegoAhorcado"
             android:label="@string/app_name" >
 
+        </activity>
+
+        <activity
+            android:name="com.motivate.visual.IJuegoSecuenciaColores"
+            android:label="@string/app_name" >
 
         </activity>
 
@@ -98,9 +112,7 @@
             android:name="com.motivate.visual.IRotarRuleta"
             android:label="@string/app_name" >
 
-
         </activity>
-
 
 
     </application>

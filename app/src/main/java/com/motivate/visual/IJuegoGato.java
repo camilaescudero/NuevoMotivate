@@ -7,9 +7,16 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
+import com.motivate.nuevo.Juego;
 import com.motivate.nuevo.JuegoGato;
+import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Cami on 08-06-2015.
@@ -33,6 +40,21 @@ public class IJuegoGato extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gato);
+
+        DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+        DataBaseJugador baseJugador = new DataBaseJugador(this);
+        ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+        jugadors= baseJugador.rescatarDatos();
+        int num = jugadors.size()-1;
+        int versus;
+        Juego juego= new Juego(dataBaseJuego.rescatarDatos());
+        TextView jugador = (TextView)findViewById(R.id.txt_gato_versus);
+        do{
+            versus= (int)(Math.random()*num);
+        }while (versus == juego.getTurno());
+
+
+        jugador.setText(jugadors.get(juego.getTurno()).getNombre()+"  vs  "+jugadors.get(versus).getNombre());
 
         for(i=0;i<=8;i++){
             c[i]=0;
