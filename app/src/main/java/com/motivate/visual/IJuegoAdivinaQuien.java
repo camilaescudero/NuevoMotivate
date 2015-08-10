@@ -11,8 +11,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
+import com.motivate.nuevo.Juego;
 import com.motivate.nuevo.JuegoAdivinaQuien;
+import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by María Elizabeth on 26-05-2015.
@@ -25,6 +31,10 @@ public class IJuegoAdivinaQuien extends ActionBarActivity {
     EditText usuario_personaje;
     ImageView img_personaje;
     JuegoAdivinaQuien adivinaQuien =new JuegoAdivinaQuien();
+    DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+    DataBaseJugador baseJugador = new DataBaseJugador(this);
+    ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+    Juego juego = new Juego();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adivinaquien);
@@ -33,6 +43,17 @@ public class IJuegoAdivinaQuien extends ActionBarActivity {
         usuario_personaje=(EditText)findViewById(R.id.txt_personaje);
         img_personaje=(ImageView)findViewById(R.id.imageView);
         //numero_generado=generar_aleatorio();
+
+
+        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_adivinaquien);
+
+        //ASIGNA EL JUGADOR DE TURNO Y LO MUESTRA EN LA PANTALLA, ADEMAS DE MODIFICAR EN LA BASE DE DATOS EL TURNO DEL JUGADOR
+        jugadors= baseJugador.rescatarDatos();
+        juego.setTurno(dataBaseJuego.rescatarDatos());
+        juego.setJugador(jugadors.get(juego.getTurno()));
+        jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
+        dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
+
 
         establecer_imagen();
 
@@ -44,6 +65,8 @@ public class IJuegoAdivinaQuien extends ActionBarActivity {
                 String nombre = usuario_personaje.getText().toString().toLowerCase().trim();
                 if (nombre.equals(adivinaQuien.asignar_nombre())) {
                     mostrar_alerta("Correcto !", "El personaje es " + nombre + ". Has ganado un punto ! ");
+                    baseJugador.modificarPuntaje(juego.getJugador().getNombre(), juego.getJugador().getPuntaje() + 1);
+
                 } else {
                     mostrar_alerta("Incorrecto !", "El personaje es " + adivinaQuien.asignar_nombre() + ". Has perdido");
                 }
@@ -61,6 +84,7 @@ public class IJuegoAdivinaQuien extends ActionBarActivity {
 
 
     private void mostrar_alerta(String titulo,String mensaje){
+
 
         AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoAdivinaQuien.this);
         builder.setMessage(mensaje)

@@ -30,7 +30,7 @@ public class IReglas extends ActionBarActivity implements ListView.OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long id) {
         String valor= (String) adapterView.getItemAtPosition(posicion);
-        Intent nuevoform= new Intent(IReglas.this,IMostrarRegla.class);
+        Intent nuevoform= new Intent(IReglas.this,IReglaJuegoX.class);
         nuevoform.putExtra("Juego", valor);
         startActivity(nuevoform);
 

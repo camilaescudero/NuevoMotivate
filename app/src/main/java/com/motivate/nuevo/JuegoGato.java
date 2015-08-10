@@ -4,15 +4,25 @@ package com.motivate.nuevo;
  * Created by Cami on 17-06-2015.
  */
 public class JuegoGato extends Juego {
-    public Jugador getJugador1(){
-        Partida p = new Partida();
-        return p.getJugadores().get(0);
+    private Jugador jugador1;
+    private Jugador jugador2;
+
+    public Jugador getJugador1() {
+        return jugador1;
     }
 
-    public Jugador getJugador2(){
-        Partida p = new Partida();
-        return p.getJugadores().get(1);
+    public void setJugador1(Jugador jugador1) {
+        this.jugador1 = jugador1;
     }
+
+    public Jugador getJugador2() {
+        return jugador2;
+    }
+
+    public void setJugador2(Jugador jugador2) {
+        this.jugador2 = jugador2;
+    }
+
 
     public Boolean verificar(){
         return true;

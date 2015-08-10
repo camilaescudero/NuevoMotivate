@@ -1,5 +1,7 @@
 package com.motivate.nuevo;
 
+import java.util.ArrayList;
+
 /**
  * Created by Cami on 23-05-2015.
  */
@@ -15,6 +17,18 @@ public class Jugador {
     public Jugador(int id, String nomb, int punt){
         nombre=nomb;
         puntaje=punt;
+    }
+
+    public void ajustarPuntaje(ArrayList<Jugador> jugadors,String nombre){
+        int i;
+        for(i=0;i<jugadors.size();i++){
+            if(jugadors.get(i).getNombre()==nombre){
+
+            }
+        }
+
+
+
     }
 
     public String getNombre() {

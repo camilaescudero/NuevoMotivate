@@ -45,7 +45,7 @@ public class IRuleta extends ActionBarActivity  {
         DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
         turno= dataBaseJuego.rescatarDatos();
         int i;
-        mensaje.append("hola\n");
+
 
         mensaje.append("\nturno : "+turno+"\n");
          for (i=0; i < juega.size();i++){
@@ -59,7 +59,7 @@ public class IRuleta extends ActionBarActivity  {
         boton_ND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nuevoformND = new Intent(IRuleta.this,IJuegoNoDiga.class);
+                Intent nuevoformND = new Intent(IRuleta.this, IJuegoNoDiga.class);
                 startActivity(nuevoformND);
             }
         });
@@ -111,5 +111,31 @@ public class IRuleta extends ActionBarActivity  {
             }
         });
 
+        Button boton_Bachillerato = (Button)findViewById(R.id.btn_bachillerato);
+        boton_Bachillerato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoBachillerato.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
+        Button boton_tabu = (Button)findViewById(R.id.btn_tabu);
+        boton_tabu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoTabu.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
+        Button boton_memorice = (Button)findViewById(R.id.btn_memorice);
+        boton_memorice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoMemorice.class);
+                startActivity(nuevoformAD);
+            }
+        });
     }
 }

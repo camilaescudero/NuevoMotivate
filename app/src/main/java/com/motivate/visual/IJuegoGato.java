@@ -29,7 +29,12 @@ public class IJuegoGato extends ActionBarActivity {
         this.jugador1 = j;
     }
 */
- JuegoGato gato = new JuegoGato();
+    JuegoGato gato = new JuegoGato();
+
+    DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+    DataBaseJugador baseJugador = new DataBaseJugador(this);
+    ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+    Juego juego = new Juego();
     Button casilla0,casilla1, casilla2, casilla3,casilla4,casilla5,casilla6, casilla7,casilla8;
     int c1, c2, c3,c4,c5,c6,c7,c8,c9;
     int[] c = new int[9];
@@ -37,24 +42,28 @@ public class IJuegoGato extends ActionBarActivity {
     int cont=0;
     int turno=0;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gato);
 
-        DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
-        DataBaseJugador baseJugador = new DataBaseJugador(this);
-        ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+
         jugadors= baseJugador.rescatarDatos();
         int num = jugadors.size()-1;
         int versus;
-        Juego juego= new Juego(dataBaseJuego.rescatarDatos());
-        TextView jugador = (TextView)findViewById(R.id.txt_gato_versus);
+
+        juego.setTurno(dataBaseJuego.rescatarDatos());
+        TextView jugadorTurnoGato = (TextView)findViewById(R.id.txt_gato_versus);
         do{
             versus= (int)(Math.random()*num);
         }while (versus == juego.getTurno());
 
+        gato.setJugador1(jugadors.get(juego.getTurno()));
+        gato.setJugador2(jugadors.get(versus));
+        jugadorTurnoGato.setText(gato.getJugador1().getNombre()+"  vs  "+gato.getJugador2().getNombre());
 
-        jugador.setText(jugadors.get(juego.getTurno()).getNombre()+"  vs  "+jugadors.get(versus).getNombre());
+        //cambia el turno para el siguiente
+        dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
 
         for(i=0;i<=8;i++){
             c[i]=0;
@@ -281,10 +290,15 @@ public class IJuegoGato extends ActionBarActivity {
 
 
     public void mensaje(int resultado){
+        DataBaseJugador manager = new DataBaseJugador(this);
+
         if(resultado==1) {
+
+            manager.modificarPuntaje(gato.getJugador1().getNombre() ,gato.getJugador2().getPuntaje()+1);
+
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoGato.this);
-            builder.setMessage("Ganaste 10 puntos")
-                    .setTitle("GANA  X")
+            builder.setMessage("Ganaste 1 puntos")
+                    .setTitle("GANA  X"+ juego.getJugador().getNombre() )
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
@@ -300,9 +314,11 @@ public class IJuegoGato extends ActionBarActivity {
 
         }
         if(resultado==2){
+            manager.modificarPuntaje(gato.getJugador1().getNombre() ,gato.getJugador2().getPuntaje()+1);
+
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoGato.this);
-            builder.setMessage("Ganaste 10 puntos")
-                    .setTitle("GANA O")
+            builder.setMessage("Ganaste 1 punto")
+                    .setTitle("GANA O"+ juego.getJugador().getNombre())
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
@@ -332,6 +348,7 @@ public class IJuegoGato extends ActionBarActivity {
             AlertDialog alert = builder.create();
             alert.show();
         }
+
 
     }
 

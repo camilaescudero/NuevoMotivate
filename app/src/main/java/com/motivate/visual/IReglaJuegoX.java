@@ -9,7 +9,7 @@ import com.motivate.nuevo.R;
 /**
  * Created by María Elizabeth on 24-05-2015.
  */
-public class IMostrarRegla extends ActionBarActivity {
+public class IReglaJuegoX extends ActionBarActivity {
     private TextView txt_nombreregla, txt_descripcionregla;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

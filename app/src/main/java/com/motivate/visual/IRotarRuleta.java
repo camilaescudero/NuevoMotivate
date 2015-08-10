@@ -39,7 +39,7 @@ public class IRotarRuleta extends ActionBarActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataBaseJuego.insertar(0);
+               // dataBaseJuego.insertar(0);
                 esperar();
                 ImageView imagen = (ImageView)findViewById(R.id.imagenRuleta);
                 Animation rota;
@@ -66,23 +66,23 @@ public class IRotarRuleta extends ActionBarActivity {
                 int random= (int)(Math.random()*5);
                 switch (random){
                     case 0:
-                        Intent nuevoformND = new Intent(IRotarRuleta.this,IJuegoNoDiga.class);
-                        startActivity(nuevoformND);
+                        Intent nuevoformAD = new Intent(IRotarRuleta.this,IJuegoAdivinaQuien.class);
+                        startActivity(nuevoformAD);
                         break;
 
                     case 1:
-                        Intent nuevoformCP = new Intent(IRotarRuleta.this,IJuegoCanteLaPalabra.class);
-                        startActivity(nuevoformCP);
+                        Intent nuevoformA = new Intent(IRotarRuleta.this,IJuegoAhorcado.class);
+                        startActivity(nuevoformA);
                         break;
 
                     case 2:
-                        Intent nuevoformPR = new Intent(IRotarRuleta.this, IJuegoPreguntaRespuesta.class);
-                        startActivity(nuevoformPR);
+                        Intent nuevoformB = new Intent(IRotarRuleta.this,IJuegoBachillerato.class);
+                        startActivity(nuevoformB);
                         break;
 
                     case 3:
-                        Intent nuevoformAD = new Intent(IRotarRuleta.this,IJuegoAdivinaQuien.class);
-                        startActivity(nuevoformAD);
+                        Intent nuevoformCP = new Intent(IRotarRuleta.this,IJuegoCanteLaPalabra.class);
+                        startActivity(nuevoformCP);
                         break;
 
                     case 4:
@@ -91,10 +91,21 @@ public class IRotarRuleta extends ActionBarActivity {
                         break;
 
                     case 5:
-                        Intent nuevoformA = new Intent(IRotarRuleta.this,IJuegoAhorcado.class);
-                        startActivity(nuevoformA);
+                        Intent nuevoformND = new Intent(IRotarRuleta.this,IJuegoNoDiga.class);
+                        startActivity(nuevoformND);
                         break;
-
+                    case 6:
+                        Intent nuevoformPR = new Intent(IRotarRuleta.this, IJuegoPreguntaRespuesta.class);
+                        startActivity(nuevoformPR);
+                        break;
+                    case 7:
+                        Intent nuevoformS = new Intent(IRotarRuleta.this, IJuegoSecuenciaColores.class);
+                        startActivity(nuevoformS);
+                        break;
+                    case 8:
+                        Intent nuevoformT = new Intent(IRotarRuleta.this, IJuegoTabu.class);
+                        startActivity(nuevoformT);
+                        break;
 
                 }
 

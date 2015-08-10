@@ -10,8 +10,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
+import com.motivate.nuevo.Juego;
 import com.motivate.nuevo.JuegoAhorcado;
+import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Mara Elizabeth on 20-06-2015.
@@ -24,10 +30,24 @@ public class IJuegoAhorcado extends ActionBarActivity {
     JuegoAhorcado ahorcado = new JuegoAhorcado();
     int estado_imagen;
     int largo= ahorcado.largo_palabra;
+    DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+    DataBaseJugador baseJugador = new DataBaseJugador(this);
+    ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+    Juego juego = new Juego();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ahorcado);
+
+        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_ahorcado);
+
+        //ASIGNA EL JUGADOR DE TURNO Y LO MUESTRA EN LA PANTALLA, ADEMAS DE MODIFICAR EN LA BASE DE DATOS EL TURNO DEL JUGADOR
+        jugadors= baseJugador.rescatarDatos();
+        juego.setTurno(dataBaseJuego.rescatarDatos());
+        juego.setJugador(jugadors.get(juego.getTurno()));
+        jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
+        dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
+
 
         btna = (Button) findViewById(R.id.btna);
         btnb = (Button) findViewById(R.id.btnb);
@@ -270,6 +290,7 @@ public class IJuegoAhorcado extends ActionBarActivity {
             palabra_secreta.setText(palabra_bonita);
             if(ahorcado.palabra_completa()){
                 mostrar_alerta("Ganaste!!","Otorgale un copete a la persona que quieras");
+                baseJugador.modificarPuntaje(juego.getJugador().getNombre(), juego.getJugador().getPuntaje() + 1);
             }
 
         } else {
@@ -317,13 +338,6 @@ public class IJuegoAhorcado extends ActionBarActivity {
         imagen_ahorcado.setImageResource(resId);
 
        // System.out.println("nombre " + adivinaQuien.asignar_nombre());
-    }
-    private String arregla_palabra(char letra){
-        String palabra_bonita= ahorcado.generar_palabra(letra).toString();
-        palabra_bonita=palabra_bonita.replace("[","");
-        palabra_bonita=palabra_bonita.replace("]","");
-        palabra_bonita=palabra_bonita.replace(","," ");
-        return palabra_bonita;
     }
 
     private void mostrar_alerta(String titulo,String mensaje){

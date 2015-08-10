@@ -18,6 +18,16 @@ public class Juego extends ActionBarActivity {
     }
 
     private int turno;
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    private Jugador jugador;
     public Juego(){
 
     }

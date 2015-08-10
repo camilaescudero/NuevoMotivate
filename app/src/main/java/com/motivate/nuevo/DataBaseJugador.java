@@ -49,7 +49,7 @@ public class DataBaseJugador {
             db.insert(TABLE_NAME, null, generarContentValues(jugadors.get(i).getNombre(), jugadors.get(i).getPuntaje()));
         }
         //db.insert(TABLE_NAME,null,generarContentValues(nomb,punt));
-        //si devuelve menos uno hay problemas
+        //si devuelve menos uno si es que hay problemas
 
     }
     public void insertar2(String nomb, String punt){

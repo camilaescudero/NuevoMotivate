@@ -30,9 +30,12 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
     TextView mensaje_cuenta;
     boolean terminado= false;
     boolean acerto=false;
+    DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+    DataBaseJugador baseJugador = new DataBaseJugador(this);
+    ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+    Juego juego = new Juego();
 
   public IJuegoPreguntaRespuesta() {
-
 
     }
 
@@ -43,18 +46,15 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
         setContentView(R.layout.activity_pregunta_respuesta);
         numero_aleatorio = (int)(Math.random()*3);
 
+        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_preguntarespuesta);
 
-        DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
-        DataBaseJugador baseJugador = new DataBaseJugador(this);
-        ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+        //ASIGNA EL JUGADOR DE TURNO Y LO MUESTRA EN LA PANTALLA, ADEMAS DE MODIFICAR EN LA BASE DE DATOS EL TURNO DEL JUGADOR
         jugadors= baseJugador.rescatarDatos();
-        Juego juego= new Juego(dataBaseJuego.rescatarDatos());
-
-
+        juego.setTurno(dataBaseJuego.rescatarDatos());
+        juego.setJugador(jugadors.get(juego.getTurno()));
+        jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
         dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
-        System.out.println("NUMERO QUE GUARDA EN BD"+dataBaseJuego.rescatarDatos()+1);
-        TextView jugador = (TextView)findViewById(R.id.txt_jugadorPR);
-        jugador.setText(jugadors.get(juego.getTurno()).getNombre());
+
         TextView pregunta_aleatoria = (TextView)findViewById(R.id.txt_pregunta);
         EditText respuesta_jugador =(EditText)findViewById(R.id.txt_respuesta);
         mensaje_cuenta = (TextView)findViewById(R.id.txt_cuenta);
@@ -107,11 +107,12 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
             ArrayList<Jugador> jugadors= new ArrayList<Jugador>();
             jugadors= manager.rescatarDatos();
 
-            manager.modificarPuntaje(jugadors.get(0).getNombre(),10);
+
+            manager.modificarPuntaje(jugadors.get(juego.getTurno()).getNombre(),jugadors.get(juego.getTurno()).getPuntaje()+1);
 
 
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
-            builder.setMessage("Ganaste 10 puntos")
+            builder.setMessage("Ganaste 1 punto")
                     .setTitle("Atención!!")
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",

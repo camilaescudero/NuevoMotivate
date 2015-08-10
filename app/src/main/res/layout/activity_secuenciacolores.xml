@@ -34,7 +34,7 @@
             android:id="@+id/btn_amarillo"
             android:background="@mipmap/amarillooff"
             android:layout_gravity="center_vertical"
-            android:layout_below="@+id/textView_jugadorsecuencia"
+            android:layout_below="@+id/txt_turno_secuencia"
             android:layout_alignLeft="@+id/textView_secuencia"
             android:layout_alignStart="@+id/textView_secuencia" />
 
@@ -62,8 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Jugador!"
-            android:id="@+id/textView_jugadorsecuencia"
+            android:id="@+id/txt_turno_secuencia"
             android:layout_below="@+id/textView_secuencia"
             android:layout_toLeftOf="@+id/btn_azul"
             android:layout_toStartOf="@+id/btn_azul" />

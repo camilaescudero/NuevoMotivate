@@ -8,9 +8,16 @@ import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.motivate.nuevo.DataBaseJuego;
+import com.motivate.nuevo.DataBaseJugador;
+import com.motivate.nuevo.Juego;
 import com.motivate.nuevo.JuegoSecuenciaColores;
+import com.motivate.nuevo.Jugador;
 import com.motivate.nuevo.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Cami on 30-06-2015.
@@ -19,10 +26,25 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
 
     Button amarrillo, azul, rojo, verde;
     int[] secuencia = new int[4];
+    DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
+    DataBaseJugador baseJugador = new DataBaseJugador(this);
+    ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
+    Juego juego = new Juego();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secuenciacolores);
+
+        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_secuencia);
+
+        //ASIGNA EL JUGADOR DE TURNO Y LO MUESTRA EN LA PANTALLA, ADEMAS DE MODIFICAR EN LA BASE DE DATOS EL TURNO DEL JUGADOR
+        jugadors= baseJugador.rescatarDatos();
+        juego.setTurno(dataBaseJuego.rescatarDatos());
+        juego.setJugador(jugadors.get(juego.getTurno()));
+        jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
+        dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
+
+
         final JuegoSecuenciaColores juegoSecuenciaColores = new JuegoSecuenciaColores();
         this.secuencia= juegoSecuenciaColores.generarSecuencia();
 
@@ -221,8 +243,9 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
     public void mensaje(int resultado){
 
         if(resultado==2){
+            baseJugador.modificarPuntaje(juego.getJugador().getNombre(), juego.getJugador().getPuntaje() + 1);
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoSecuenciaColores.this);
-            builder.setMessage("Ganaste 10 puntos")
+            builder.setMessage("Ganaste 1 punto")
                     .setTitle("GANA ")
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
