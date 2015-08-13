@@ -36,6 +36,7 @@ public class IJuegoNoDiga extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nodigasinodigano);
 
         TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_nodiga);
 
@@ -46,8 +47,6 @@ public class IJuegoNoDiga extends ActionBarActivity {
         jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
         dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
 
-
-        setContentView(R.layout.activity_nodigasinodigano);
         comenzar = (Button) findViewById(R.id.btn_comenzar);
         mensaje_cuenta=(TextView) findViewById(R.id.Titulo);
         comenzar.setOnClickListener(new View.OnClickListener(){

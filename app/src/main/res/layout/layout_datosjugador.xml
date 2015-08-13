@@ -27,7 +27,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Partida"
+        android:text="Jugar"
         android:id="@+id/btn_iniciarpartida"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.15" />

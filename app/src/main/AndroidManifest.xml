@@ -39,9 +39,8 @@
             android:name="com.motivate.visual.ISalon"
             android:label="@string/app_name" >
 
-
-
         </activity>
+
         <activity
             android:name="com.motivate.visual.IJuegoCanteLaPalabra"
             android:label="@string/app_name" >
@@ -58,18 +57,11 @@
             android:name="com.motivate.visual.IJuegoPreguntaRespuesta"
             android:label="@string/app_name" >
 
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
             android:name="com.motivate.visual.IJuegoGato"
             android:label="@string/app_name" >
-
 
         </activity>
 
@@ -80,7 +72,7 @@
         </activity>
 
         <activity
-            android:name="com.motivate.visual.IMostrarRegla"
+            android:name="com.motivate.visual.IReglaJuegoX"
             android:label="@string/app_name" >
 
         </activity>
@@ -109,9 +101,24 @@
         </activity>
 
         <activity
-            android:name="com.motivate.visual.IRotarRuleta"
+            android:name="com.motivate.visual.IJuegoBachillerato"
             android:label="@string/app_name" >
 
+        </activity>
+
+        <activity
+            android:name="com.motivate.visual.IRotarRuleta"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.motivate.visual.IJuegoTabu"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.motivate.visual.IJuegoMemorice"
+            android:label="@string/app_name" >
         </activity>
 
 

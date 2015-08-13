@@ -54,7 +54,7 @@ public class IJuegoTabu extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabu);
 
-        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_ahorcado);
+        TextView jugadorTurno= (TextView)findViewById(R.id.txt_turno_tabu);
 
         //ASIGNA EL JUGADOR DE TURNO Y LO MUESTRA EN LA PANTALLA, ADEMAS DE MODIFICAR EN LA BASE DE DATOS EL TURNO DEL JUGADOR
         jugadors= baseJugador.rescatarDatos();

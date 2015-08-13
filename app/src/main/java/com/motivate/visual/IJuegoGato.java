@@ -180,7 +180,8 @@ public class IJuegoGato extends ActionBarActivity {
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
                         casilla4.setBackgroundResource(R.mipmap.cruz);
-                        turno=turno+1;
+                        turno=turno
+                                +1;
                         c[4]=1;
                     }
                     else{
@@ -294,11 +295,11 @@ public class IJuegoGato extends ActionBarActivity {
 
         if(resultado==1) {
 
-            manager.modificarPuntaje(gato.getJugador1().getNombre() ,gato.getJugador2().getPuntaje()+1);
+            manager.modificarPuntaje(gato.getJugador1().getNombre() ,gato.getJugador1().getPuntaje()+1);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoGato.this);
             builder.setMessage("Ganaste 1 puntos")
-                    .setTitle("GANA  X"+ juego.getJugador().getNombre() )
+                    .setTitle("GANA  X "+ gato.getJugador1().getNombre() )
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
@@ -314,11 +315,11 @@ public class IJuegoGato extends ActionBarActivity {
 
         }
         if(resultado==2){
-            manager.modificarPuntaje(gato.getJugador1().getNombre() ,gato.getJugador2().getPuntaje()+1);
+            manager.modificarPuntaje(gato.getJugador2().getNombre() ,gato.getJugador2().getPuntaje()+1);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoGato.this);
             builder.setMessage("Ganaste 1 punto")
-                    .setTitle("GANA O"+ juego.getJugador().getNombre())
+                    .setTitle("GANA O"+ gato.getJugador2().getNombre())
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
