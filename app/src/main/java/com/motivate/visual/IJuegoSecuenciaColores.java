@@ -25,12 +25,12 @@ import java.util.ArrayList;
 public class IJuegoSecuenciaColores  extends ActionBarActivity {
 
     Button amarrillo, azul, rojo, verde;
-    int[] secuencia = new int[4];
+    int[] secuencia = new int[5];
     DataBaseJuego dataBaseJuego = new DataBaseJuego(this);
     DataBaseJugador baseJugador = new DataBaseJugador(this);
     ArrayList<Jugador> jugadors = new ArrayList<Jugador>();
     Juego juego = new Juego();
-
+    TextView mensaje_cuenta;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secuenciacolores);
@@ -44,7 +44,7 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
         jugadorTurno.setText(jugadors.get(juego.getTurno()).getNombre());
         dataBaseJuego.modificarTurno(dataBaseJuego.devuelveId(),dataBaseJuego.rescatarDatos()+1,jugadors.size());
 
-
+        mensaje_cuenta = (TextView)findViewById(R.id.txt_cuenta_secuencia);
         final JuegoSecuenciaColores juegoSecuenciaColores = new JuegoSecuenciaColores();
         this.secuencia= juegoSecuenciaColores.generarSecuencia();
 
@@ -95,35 +95,59 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
     }
 
     public void esperar(){
-        new CountDownTimer(16000,1000) {
+
+
+        new CountDownTimer(25000,1000) {
 
             @Override
             public void onTick(long l) {
-                //mensaje_cuenta.setText("Tiempo "+(l/1000));
-                if(l/1000==15){
+
+                if(l/1000==24){
+                    mensaje_cuenta.setText(" 3 ");
+                }
+                if(l/1000==23){
+                    mensaje_cuenta.setText(" 2 ");
+                }
+                if(l/1000==22){
+                    mensaje_cuenta.setText(" 1 ");
+                }
+                if(l/1000==21){
+                    mensaje_cuenta.setText(" GO! ");
+                }
+                if(l/1000==20){
+                    mensaje_cuenta.setText("  ");
+                }
+                if(l/1000==19){
                     muestraColores(secuencia[0]);
                 }
-                if(l/1000==13){
+                if(l/1000==17){
                     ocultaColores(secuencia[0]);
                 }
-                if(l/1000==11){
+                if(l/1000==15){
                     muestraColores(secuencia[1]);
                 }
-                if(l/1000==9){
+                if(l/1000==13){
                     ocultaColores(secuencia[1]);
                 }
-                if(l/1000==7){
+                if(l/1000==11){
                     muestraColores(secuencia[2]);
                 }
-                if(l/1000==5){
+                if(l/1000==9){
                     ocultaColores(secuencia[2]);
                 }
-                if(l/1000==3){
+                if(l/1000==7){
                     muestraColores(secuencia[3]);
                 }
-                if(l/1000==1){
+                if(l/1000==5){
                     ocultaColores(secuencia[3]);
                 }
+                if(l/1000==3){
+                    muestraColores(secuencia[4]);
+                }
+                if(l/1000==1){
+                    ocultaColores(secuencia[4]);
+                }
+
 
             }
 
@@ -251,9 +275,10 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
+
                                     dialog.cancel();
-                                    //Intent nuevoform4 = new Intent(IJuegoSecuenciaColores.this,IRuleta.class);
-                                    //startActivity(nuevoform4);
+                                    Intent nuevoform4 = new Intent(IJuegoSecuenciaColores.this,IRuleta.class);
+                                    startActivity(nuevoform4);
                                 }
                             });
             AlertDialog alert = builder.create();
@@ -262,15 +287,17 @@ public class IJuegoSecuenciaColores  extends ActionBarActivity {
         }
         if(resultado==-2){
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoSecuenciaColores.this);
-            builder.setMessage("Toman los dos por weones  xD")
+            builder.setMessage("Perdiste")
                     .setTitle("Perdiste ")
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
                                     //Intent nuevoform4 = new Intent(IJuegoSecuenciaColores.this,IRuleta.class);
                                     //startActivity(nuevoform4);
+                                    dialog.cancel();
+                                    Intent nuevoform4 = new Intent(IJuegoSecuenciaColores.this,IRuleta.class);
+                                    startActivity(nuevoform4);
                                 }
                             });
             AlertDialog alert = builder.create();

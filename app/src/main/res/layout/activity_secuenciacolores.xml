@@ -67,5 +67,16 @@
             android:layout_toLeftOf="@+id/btn_azul"
             android:layout_toStartOf="@+id/btn_azul" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txt_cuenta_secuencia"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_amarillo"
+            android:layout_above="@+id/btn_verde"
+            android:textSize="35dp"
+            android:textIsSelectable="false" />
+
     </RelativeLayout>
 </LinearLayout>

@@ -85,13 +85,13 @@ public class IJuegoGato extends ActionBarActivity {
             if(c[0]==0 ){
                 if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                    casilla0.setBackgroundResource(R.mipmap.cruz);
+                    casilla0.setBackgroundResource(R.mipmap.cerocruz);
                     turno=turno+1;
                     c[0]=1;
 
                 }
                 else{
-                    casilla0.setBackgroundResource(R.mipmap.ciculo);
+                    casilla0.setBackgroundResource(R.mipmap.cerocirculo);
                     turno=turno+1;
                        c[0]=2;
                 }
@@ -110,12 +110,12 @@ public class IJuegoGato extends ActionBarActivity {
                 if(c[1]==0 ){
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                        casilla1.setBackgroundResource(R.mipmap.cruz);
+                        casilla1.setBackgroundResource(R.mipmap.unocruz);
                         turno=turno+1;
                         c[1]=1;
                     }
                     else{
-                        casilla1.setBackgroundResource(R.mipmap.ciculo);
+                        casilla1.setBackgroundResource(R.mipmap.unocirculo);
                         turno=turno+1;
                         c[1]=2;
                     }
@@ -133,12 +133,12 @@ public class IJuegoGato extends ActionBarActivity {
                 if(c[2]==0){
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                        casilla2.setBackgroundResource(R.mipmap.cruz);
+                        casilla2.setBackgroundResource(R.mipmap.doscruz);
                         turno=turno+1;
                         c[2]=1;
                     }
                     else{
-                        casilla2.setBackgroundResource(R.mipmap.ciculo);
+                        casilla2.setBackgroundResource(R.mipmap.doscirculo);
                         turno=turno+1;
                         c[2]=2;
                     }
@@ -156,12 +156,12 @@ public class IJuegoGato extends ActionBarActivity {
                     if(c[3]==0){
                         if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                            casilla3.setBackgroundResource(R.mipmap.cruz);
+                            casilla3.setBackgroundResource(R.mipmap.trescruz);
                             turno=turno+1;
                             c[3]=1;
                         }
                         else{
-                            casilla3.setBackgroundResource(R.mipmap.ciculo);
+                            casilla3.setBackgroundResource(R.mipmap.trescirculo);
                             turno=turno+1;
                             c[3]=2;
                         }
@@ -179,13 +179,13 @@ public class IJuegoGato extends ActionBarActivity {
                 if(c[4]==0){
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                        casilla4.setBackgroundResource(R.mipmap.cruz);
+                        casilla4.setBackgroundResource(R.mipmap.cuatrocruz);
                         turno=turno
                                 +1;
                         c[4]=1;
                     }
                     else{
-                        casilla4.setBackgroundResource(R.mipmap.ciculo);
+                        casilla4.setBackgroundResource(R.mipmap.cuatrocirculo);
                         turno=turno+1;
                         c[4]=2;
                     }
@@ -203,11 +203,11 @@ public class IJuegoGato extends ActionBarActivity {
                 if(c[5]==0) {
                     if (turno == 0 || turno == 2 || turno == 4 || turno == 6 || turno == 8) {
 
-                        casilla5.setBackgroundResource(R.mipmap.cruz);
+                        casilla5.setBackgroundResource(R.mipmap.cincocruz);
                         turno = turno + 1;
                         c[5]=1;
                     }else{
-                        casilla5.setBackgroundResource(R.mipmap.ciculo);
+                        casilla5.setBackgroundResource(R.mipmap.cincocirculo);
                         turno = turno + 1;
                         c[5]=2;
                     }
@@ -225,11 +225,11 @@ public class IJuegoGato extends ActionBarActivity {
                 if (c[6]==0) {
                     if (turno == 0 || turno == 2 || turno == 4 || turno == 6 || turno == 8) {
 
-                        casilla6.setBackgroundResource(R.mipmap.cruz);
+                        casilla6.setBackgroundResource(R.mipmap.seiscruz);
                         turno = turno + 1;
                         c[6]=1;
                     } else {
-                        casilla6.setBackgroundResource(R.mipmap.ciculo);
+                        casilla6.setBackgroundResource(R.mipmap.seiscirculo);
                         turno = turno + 1;
                         c[6]=2;
                     }
@@ -247,12 +247,12 @@ public class IJuegoGato extends ActionBarActivity {
                 if (c[7]==0){
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                        casilla7.setBackgroundResource(R.mipmap.cruz);
+                        casilla7.setBackgroundResource(R.mipmap.sietecruz);
                         turno=turno+1;
                         c[7]=1;
                     }
                     else{
-                        casilla7.setBackgroundResource(R.mipmap.ciculo);
+                        casilla7.setBackgroundResource(R.mipmap.sietecirculo);
                         turno=turno+1;
                         c[7]=2;
                     }
@@ -270,12 +270,12 @@ public class IJuegoGato extends ActionBarActivity {
                 if(c[8]==0){
                     if(turno ==0 || turno ==2 ||turno ==4||turno ==6||turno ==8 ){
 
-                        casilla8.setBackgroundResource(R.mipmap.cruz);
+                        casilla8.setBackgroundResource(R.mipmap.ochocruz);
                         turno=turno+1;
                         c[8]=1;
                     }
                     else{
-                        casilla8.setBackgroundResource(R.mipmap.ciculo);
+                        casilla8.setBackgroundResource(R.mipmap.ochocirculo);
                         turno=turno+1;
                         c[8]=2;
                     }

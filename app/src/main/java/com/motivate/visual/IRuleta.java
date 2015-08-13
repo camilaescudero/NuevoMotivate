@@ -129,6 +129,15 @@ public class IRuleta extends ActionBarActivity  {
             }
         });
 
+        Button boton_secuencia = (Button)findViewById(R.id.btn_secuencia);
+        boton_secuencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nuevoformAD = new Intent(IRuleta.this,IJuegoSecuenciaColores.class);
+                startActivity(nuevoformAD);
+            }
+        });
+
         Button boton_memorice = (Button)findViewById(R.id.btn_memorice);
         boton_memorice.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/x2"
             android:layout_toStartOf="@+id/x2"
-            android:background="@mipmap/tele" />
+            android:background="@mipmap/cero" />
 
         <Button
             android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
             android:id="@+id/x2"
             android:layout_alignBottom="@+id/x1"
             android:layout_centerHorizontal="true"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/uno"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:layout_toRightOf="@+id/x2"
             android:layout_alignRight="@+id/x9"
             android:layout_alignEnd="@+id/x9"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/dos"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_below="@+id/x1"
             android:layout_alignLeft="@+id/x1"
             android:layout_alignStart="@+id/x1"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/tres"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignBottom="@+id/x4"
             android:layout_alignTop="@+id/x4"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/cuatro"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_toRightOf="@+id/x5"
             android:layout_alignRight="@+id/x3"
             android:layout_alignEnd="@+id/x3"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/cinco"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
             android:layout_below="@+id/x4"
             android:layout_alignLeft="@+id/x4"
             android:layout_alignStart="@+id/x4"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/seis"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
             android:layout_below="@+id/x5"
             android:layout_alignLeft="@+id/x5"
             android:layout_alignStart="@+id/x5"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/siete"  />
 
         <Button
             android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
             android:layout_below="@+id/x6"
             android:layout_toRightOf="@+id/x8"
             android:layout_toEndOf="@+id/x8"
-            android:background="@mipmap/tele"  />
+            android:background="@mipmap/ocho"  />
 
         <TextView
             android:layout_width="wrap_content"

@@ -24,7 +24,7 @@ public class IJugadorEstandar extends ActionBarActivity {
 
         npick=(NumberPicker)findViewById(R.id.npick_cantidadjugadores);
         npick.setMaxValue(40);
-        npick.setMinValue(1);
+        npick.setMinValue(2);
         npick.setWrapSelectorWheel(false);
 
         respuesta=(TextView)findViewById(R.id.txt_respuesta);

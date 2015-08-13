@@ -33,7 +33,7 @@ public class JuegoSecuenciaColores extends Juego {
 
 
     public JuegoSecuenciaColores() {
-        secuencia= new  int[4];
+        secuencia= new  int[5];
     }
     public int[] generarSecuencia(){
 
@@ -41,15 +41,16 @@ public class JuegoSecuenciaColores extends Juego {
         secuencia[1]= (int)(Math.random()*3);
         secuencia[2]= (int)(Math.random()*3);
         secuencia[3]= (int)(Math.random()*3);
+        secuencia[4]= (int)(Math.random()*3);
         return secuencia;
     }
     public int compraraColores( int color){
 
-        if (secuencia[selecciona]==color && this.selecciona<3){
+        if (secuencia[selecciona]==color && this.selecciona<4){
             this.selecciona=this.selecciona+1;
               return 1;
         }
-        if (secuencia[selecciona]==color && this.selecciona==3){
+        if (secuencia[selecciona]==color && this.selecciona==4){
             this.selecciona=this.selecciona+1;
             return 2;
         }
