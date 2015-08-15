@@ -112,7 +112,7 @@ public class IJuegoPreguntaRespuesta extends ActionBarActivity {
 
 
             AlertDialog.Builder builder = new AlertDialog.Builder(IJuegoPreguntaRespuesta.this);
-            builder.setMessage("Ganaste 1 punto")
+            builder.setMessage("Ganaste 1 punto!!")
                     .setTitle("Atención!!")
                     .setCancelable(false)
                     .setNeutralButton("Aceptar",
